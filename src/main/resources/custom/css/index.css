@@ -1,0 +1,154 @@
+/* --------------------------------------------------------------------------------------------------------------------- General start */
+
+@font-face {
+    font-family: "Gilroy", sans-serif;
+    src: local("Gilroy");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Gilroy', sans-serif;
+}
+
+.page-wrapper {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- General end */
+
+
+/* --------------------------------------------------------------------------------------------------------------------- Header start */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+}
+
+.header-wrapper-logo {
+    width: 50px;
+}
+
+.header-wrapper-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 400px;
+}
+
+.header-wrapper-menu a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.header-wrapper-menu a:hover {
+    color: #507bdf;
+}
+
+.header-wrapper-menu-secondLink {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.header-wrapper-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 30px;
+    background: #507bdf;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header-wrapper-button span {
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- Header end */
+
+
+/* --------------------------------------------------------------------------------------------------------------------- Body start */
+
+.body-firstBlock {
+    height: 800px;
+    width: 100%;
+    background: #e3e4e7;
+}
+
+.body-secondBlock {
+    height: 800px;
+    width: 100%;
+    background: #ffffff;
+}
+
+.body-thirdBlock {
+    height: 800px;
+    width: 100%;
+    background: #536fb9;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- Body end */
+
+
+/* --------------------------------------------------------------------------------------------------------------------- Footer start */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background: #1c1e23;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-wrapper-policy {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.4s ease-in-out;
+}
+
+.footer-wrapper-policy:hover {
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- Footer end */
