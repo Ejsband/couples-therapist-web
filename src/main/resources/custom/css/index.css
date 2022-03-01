@@ -42,19 +42,50 @@ header {
     width: 1200px;
 }
 
-.header-wrapper-logo {
-    width: 50px;
+.header-wrapper-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.header-wrapper-menu {
+.header-wrapper-left-logo {
+    width: 55px;
+}
+
+.header-wrapper-left-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    margin-left: 30px;
+}
+
+.header-wrapper-left-contacts a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-wrapper-left-contacts-email {
+    margin-top: 3px;
+}
+
+.header-wrapper-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-wrapper-right-menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left: 400px;
 }
 
-.header-wrapper-menu a {
+.header-wrapper-right-menu a {
     display: block;
     text-decoration: none;
     color: black;
@@ -63,16 +94,11 @@ header {
     transition: 0.3s ease-in-out;
 }
 
-.header-wrapper-menu a:hover {
+.header-wrapper-right-menu a:hover {
     color: #507bdf;
 }
 
-.header-wrapper-menu-secondLink {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.header-wrapper-button {
+.header-wrapper-right-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,9 +107,10 @@ header {
     background: #507bdf;
     border-radius: 10px;
     cursor: pointer;
+    margin-left: 30px;
 }
 
-.header-wrapper-button span {
+.header-wrapper-right-button span {
     color: #ffffff;
     font-size: 1rem;
     letter-spacing: 0.5px;
@@ -112,7 +139,7 @@ header {
 .body-thirdBlock {
     height: 800px;
     width: 100%;
-    background: #536fb9;
+    background: #e3e4e7;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------- Body end */
@@ -139,11 +166,36 @@ footer {
     color: #ffffff;
 }
 
+.footer-wrapper-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-wrapper-social img {
+    cursor: pointer;
+}
+
+.footer-wrapper-social-vk {
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer-wrapper-social-ig {
+    width: 25px;
+}
+
+.footer-wrapper-social-tg {
+    width: 25px;
+}
+
 .footer-wrapper-policy {
     margin-top: 15px;
     margin-bottom: 15px;
     text-decoration: none;
-    color: #ffffff;
+    color: #3454cb;
     transition: 0.4s ease-in-out;
 }
 

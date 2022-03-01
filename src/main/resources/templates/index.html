@@ -22,16 +22,22 @@
 
         <header>
             <div class="header-wrapper">
-                <div class="header-wrapper-logo">
-                    <img th:src="@{/custom/img/logo.svg}" alt="">
+                <div class="header-wrapper-left">
+                    <div class="header-wrapper-left-logo">
+                        <img th:src="@{/custom/img/logo.svg}" alt="">
+                    </div>
+                    <div class="header-wrapper-left-contacts">
+                        <a href="tel:+79515342645" class="header-wrapper-left-contacts-phone">+7-951-534-2645</a>
+                        <a href="mailto:vladimirmoroz@help.ru" class="header-wrapper-left-contacts-email">vladimirmoroz@help.ru</a>
+                    </div>
                 </div>
-                <nav class="header-wrapper-menu">
-                    <a class="header-wrapper-menu-firstLink" th:href="@{#}">Контакты</a>
-                    <a class="header-wrapper-menu-secondLink" th:href="@{#}">Инструкция</a>
-                    <a class="header-wrapper-menu-thirdLink" th:href="@{#}">Консультации</a>
-                </nav>
-                <div class="header-wrapper-button">
-                    <span>Информированное согласие</span>
+                <div class="header-wrapper-right">
+                    <nav class="header-wrapper-right-menu">
+                        <a th:href="@{#}">Инструкция</a>
+                    </nav>
+                    <div class="header-wrapper-right-button">
+                        <span>Информированное согласие</span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -55,9 +61,9 @@
         <footer>
             <div class="footer-wrapper">
                 <div class="footer-wrapper-social">
-                    <img th:src="@{/custom/img/instagram.svg}" alt="">
-                    <img th:src="@{/custom/img/vk.svg}" alt="">
-                    <img th:src="@{/custom/img/fb.svg}" alt="">
+                    <a class="footer-wrapper-social-ig"><img th:src="@{/custom/img/ig.svg}" alt=""></a>
+                    <a class="footer-wrapper-social-vk"><img th:src="@{/custom/img/vk.svg}" alt=""></a>
+                    <a class="footer-wrapper-social-tg"><img th:src="@{/custom/img/tg.svg}" alt=""></a>
                 </div>
                 <a class="footer-wrapper-policy" th:href="@{#}">Пользовательское соглашение</a>
                 <span class="footer-wrapper-copyright"></span>
