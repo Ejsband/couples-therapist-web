@@ -6,14 +6,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "contacts")
-public class Contacts {
+public class Contact {
 
     @Id
-    String id;
-    String name;
-    String value;
+    private String id;
+    private String name;
+    private String value;
 
-    public Contacts() {
+    public Contact() {
     }
 
     public String getId() {

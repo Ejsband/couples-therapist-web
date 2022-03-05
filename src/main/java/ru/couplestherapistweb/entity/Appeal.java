@@ -4,19 +4,30 @@ package ru.couplestherapistweb.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "clients")
-public class Clients {
+@Table(name = "appeals")
+public class Appeal {
 
     @Id
-    String id;
-    String name;
-    String phone;
-    String email;
-    String text;
+    private String id;
+    private String name;
+    private String phone;
+    private String email;
+    private String text;
+    private LocalDateTime date;
 
-    public Clients() {
+    public Appeal() {
+    }
+
+    public Appeal(String id, String name, String phone, String email, String text, LocalDateTime date) {
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+        this.text = text;
+        this.date = date;
     }
 
     public String getId() {
@@ -57,5 +68,13 @@ public class Clients {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 }

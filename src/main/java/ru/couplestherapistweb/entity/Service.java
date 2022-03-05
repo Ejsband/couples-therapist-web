@@ -9,10 +9,10 @@ import javax.persistence.Table;
 public class Service {
 
     @Id
-    String id;
-    String name;
-    Integer price;
-    Integer duration;
+    private String id;
+    private String name;
+    private Integer price;
+    private Integer duration;
 
     public Service() {
     }
