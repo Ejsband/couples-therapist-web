@@ -10,4 +10,9 @@ public class MainController {
     public String getIndexPage() {
         return "index";
     }
+
+    @GetMapping("/instruction")
+    public String getInstructionPage() {
+        return "instruction";
+    }
 }

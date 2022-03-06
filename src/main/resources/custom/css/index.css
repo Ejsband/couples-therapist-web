@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* --------------------------------------------------------------------------------------------------------------------- General start */
 
 @font-face {
@@ -20,7 +22,27 @@ html {
     min-height: 100vh;
 }
 
+.body {
+    padding-bottom: 150px;
+}
+
 /* --------------------------------------------------------------------------------------------------------------------- General end */
+
+
+/* ---------------------------------------------------------------------------------------------------------------------  Variables start */
+
+:root {
+    --colorOne: #3272ff;
+    --colorTwo: #2738a7;
+
+    --buttonHeight: 32px;
+    --butttonBorderRadius: 15px;
+    --buttonFontSize: 1.2rem;
+
+    --animation: all 0.3s ease-in-out;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------  Variables end */
 
 
 /* --------------------------------------------------------------------------------------------------------------------- Header start */
@@ -90,34 +112,35 @@ header {
     display: block;
     text-decoration: none;
     color: black;
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: 0.3s ease-in-out;
+    font-size: var(--buttonFontSize);
+    transition: var(--animation);
 }
 
 .header-wrapper-right-menu a:hover {
-    color: #507bdf;
+    color: var(--colorTwo);
 }
 
 .header-wrapper-right-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
-    height: 30px;
-    background: #507bdf;
-    border-radius: 10px;
+    width: 280px;
+    height: var(--buttonHeight);
+    background: var(--colorOne);
+    border-radius: var(--butttonBorderRadius);
+    font-size: var(--buttonFontSize);
     cursor: pointer;
     margin-left: 30px;
+    transition: var(--animation);
+}
+
+.header-wrapper-right-button:hover {
+    background: var(--colorTwo);
 }
 
 .header-wrapper-right-button span {
-    color: #ffffff;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    color: #FFFFFF;
     font-weight: 500;
-    transition: 0.3s ease-in-out;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------- Header end */
@@ -322,7 +345,7 @@ header {
 }
 
 .body-thirdBlock-title h3 span {
-    color: #596fee;
+    color: var(--colorOne);
 }
 
 .body-thirdBlock-container {
@@ -353,17 +376,21 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #507bdf;
-    border-radius: 10px;
-    width: 230px;
-    height: 30px;
-    cursor: pointer;
+    background-color: var(--colorOne);
+    height: var(--buttonHeight);
+    border-radius: var(--butttonBorderRadius);
+    font-size: var(--buttonFontSize);
+    width: 240px;
+    text-decoration: none;
+    transition: var(--animation);
+}
 
+.body-thirdBlock-container-left-button:hover {
+    background-color: var(--colorTwo);
 }
 
 .body-thirdBlock-container-left-button span {
     color: #e3e4e7;
-    font-size: 1.3rem;
 }
 
 .body-thirdBlock-container-right img {
@@ -379,9 +406,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
     width: 100%;
     height: 150px;
     background: #1b1919;
+    bottom: 0;
 }
 
 .footer-wrapper {
@@ -423,7 +452,8 @@ footer {
     margin-top: 15px;
     margin-bottom: 15px;
     text-decoration: none;
-    color: #2263d9;
+    color: var(--colorOne);
+    cursor: pointer;
     transition: 0.4s ease-in-out;
 }
 
