@@ -1,157 +1,67 @@
 @charset "UTF-8";
 
-/* --------------------------------------------------------------------------------------------------------------------- General start */
+/* --------------------------------------------------------------------------------------------------------------------- Body start */
 
-@font-face {
-    font-family: "Gilroy", sans-serif;
-    src: local("Gilroy");
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-size: 14px;
-    font-family: 'Gilroy', sans-serif;
-}
-
-.page-wrapper {
-    position: relative;
-    min-height: 100vh;
-}
-
-.body {
-    padding-bottom: 150px;
-}
-
-/* --------------------------------------------------------------------------------------------------------------------- General end */
-
-
-/* ---------------------------------------------------------------------------------------------------------------------  Variables start */
-
-:root {
-    --colorOne: #3272ff;
-    --colorTwo: #2738a7;
-
-    --buttonHeight: 32px;
-    --butttonBorderRadius: 15px;
-    --buttonFontSize: 1.2rem;
-
-    --animation: all 0.3s ease-in-out;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------  Variables end */
-
-
-/* --------------------------------------------------------------------------------------------------------------------- Header start */
-
-header {
+.body-firstBlock {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    height: 800px;
     width: 100%;
-    height: 70px;
-    background: #ffffff;
+    background: #030303;
 }
 
-.header-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 1200px;
-}
-
-.header-wrapper-left {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.header-wrapper-left-logo {
-    width: 55px;
-}
-
-.header-wrapper-left-contacts {
+.body-firstBlock-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    margin-left: 30px;
+    margin-right: 50px;
+    width: 700px;
+    color: #ffffff;
 }
 
-.header-wrapper-left-contacts a {
-    text-decoration: none;
-    color: black;
+.body-firstBlock-container h1 {
+    font-size: 3rem;
 }
 
-.header-wrapper-left-contacts-email {
-    margin-top: 3px;
+.body-firstBlock-container h3 {
+    margin-top: 5px;
+    font-size: 1.6rem;
 }
 
-.header-wrapper-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.body-firstBlock-container-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 
-.header-wrapper-right-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-wrapper-right-menu a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    font-size: var(--buttonFontSize);
-    transition: var(--animation);
-}
-
-.header-wrapper-right-menu a:hover {
-    color: var(--colorTwo);
-}
-
-.header-wrapper-right-button {
+.body-firstBlock-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
     width: 280px;
     height: var(--buttonHeight);
-    background: var(--colorOne);
     border-radius: var(--butttonBorderRadius);
     font-size: var(--buttonFontSize);
     cursor: pointer;
-    margin-left: 30px;
+    background: var(--colorOne);
     transition: var(--animation);
 }
 
-.header-wrapper-right-button:hover {
+.body-firstBlock-button:hover {
     background: var(--colorTwo);
 }
 
-.header-wrapper-right-button span {
+.body-firstBlock-button-text {
     color: #FFFFFF;
-    font-weight: 500;
 }
 
-/* --------------------------------------------------------------------------------------------------------------------- Header end */
-
-
-/* --------------------------------------------------------------------------------------------------------------------- Body start */
-
-.body-firstBlock {
-    height: 800px;
-    width: 100%;
-    background: #e3e4e7;
+.body-firstBlock-photo img {
+    height: 790px;
 }
 
 .body-secondBlock {
@@ -188,7 +98,12 @@ header {
 
 .body-secondBlock-container-left {
     flex-direction: column;
-    border: solid black 1px;
+    box-shadow: 0 0 10px 5px rgb(0, 0, 0, 0.15);
+    transition: var(--animation);
+}
+
+.body-secondBlock-container-left:hover {
+    box-shadow: 0 0 25px 5px rgb(0, 0, 0, 0.15);
 }
 
 .body-secondBlock-container-left-top {
@@ -250,7 +165,12 @@ header {
 
 .body-secondBlock-container-right {
     flex-direction: column;
-    border: solid black 1px;
+    box-shadow: 0 0 10px 5px rgb(0, 0, 0, 0.15);
+    transition: var(--animation);
+}
+
+.body-secondBlock-container-right:hover {
+    box-shadow: 0 0 25px 5px rgb(0, 0, 0, 0.15);
 }
 
 .body-secondBlock-container-right-top {
@@ -333,7 +253,7 @@ header {
     align-items: center;
     height: 500px;
     width: 100%;
-    background: #e3e4e7;
+    background-color: var(--colorThree);
 }
 
 .body-thirdBlock-title {
@@ -398,67 +318,3 @@ header {
 }
 
 /* --------------------------------------------------------------------------------------------------------------------- Body end */
-
-
-/* --------------------------------------------------------------------------------------------------------------------- Footer start */
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 150px;
-    background: #1b1919;
-    bottom: 0;
-}
-
-.footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-.footer-wrapper-social {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-wrapper-social img {
-    cursor: pointer;
-}
-
-.footer-wrapper-social-vk {
-    width: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.footer-wrapper-social-ig {
-    width: 25px;
-}
-
-.footer-wrapper-social-tg {
-    width: 25px;
-}
-
-.footer-wrapper-policy {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-decoration: none;
-    color: var(--colorOne);
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-}
-
-.footer-wrapper-policy:hover {
-    text-decoration: underline;
-}
-
-/* --------------------------------------------------------------------------------------------------------------------- Footer end */
