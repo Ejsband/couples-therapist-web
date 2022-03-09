@@ -20,14 +20,15 @@ public class AppealRepositoryImpl implements AppealRepository {
 
     @Override
     public Appeal findById(String id) {
-        return entityManager.createQuery("SELECT c FROM Appeal c WHERE c.id = :id", Appeal.class)
+        return entityManager.createQuery("SELECT a FROM Appeal a WHERE a.id = :id", Appeal.class)
                 .setParameter("id", id)
                 .getSingleResult();
     }
 
     @Override
     public List<Appeal> findAll() {
-        return null;
+        return entityManager.createQuery("SELECT a FROM Appeal a", Appeal.class)
+                .getResultList();
     }
 
     @Override
