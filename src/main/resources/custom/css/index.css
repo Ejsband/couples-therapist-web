@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: center;
     padding-top: 70px;
-    width: 100%;
+    /*width: 100%;*/
     background: #030303;
 }
 
@@ -430,6 +430,7 @@
 
 .popUpThree-form-name-container-left {
     margin-bottom: 4px;
+    width: 62px;
     font-size: var(--textFontSize);
     line-height: var(--textLineHeight);
     font-family: var(--textFontFamily);
@@ -440,7 +441,6 @@
 }
 
 .popUpThree-form-name-container-right input {
-    max-width: 335px;
     height: 26px;
     outline: none;
     border: none;
@@ -473,6 +473,7 @@
 
 .popUpThree-form-phone-container-left {
     margin-bottom: 4px;
+    width: 62px;
     font-size: var(--textFontSize);
     line-height: var(--textLineHeight);
     font-family: var(--textFontFamily);
@@ -483,7 +484,6 @@
 }
 
 .popUpThree-form-phone-container-right input {
-    max-width: 334px;
     height: 26px;
     outline: none;
     border: none;
@@ -516,6 +516,7 @@
 
 .popUpThree-form-email-container-left {
     margin-bottom: 4px;
+    width: 62px;
     font-size: var(--textFontSize);
     line-height: var(--textLineHeight);
     font-family: var(--textFontFamily);
@@ -526,7 +527,6 @@
 }
 
 .popUpThree-form-email-container-right input {
-    max-width: 335px;
     height: 26px;
     outline: none;
     border: none;
@@ -617,6 +617,7 @@
 
     .body-secondBlock-container {
         flex-direction: column;
+        width: 100%;
     }
 
     .body-secondBlock-container-left {
@@ -643,7 +644,11 @@
     }
 
     .popUpThree-form {
-        width: 70%;
+        width: 65%;
+    }
+
+    .popUpThree-form-text-container textarea {
+        width: 390px;
     }
 }
 
@@ -723,28 +728,16 @@
         width: 95%;
     }
 
-    .popUpThree-form-name-container-left {
-        min-width: 68px;
-    }
-
     .popUpThree-form-name-container-right {
-        max-width: 120px;
-    }
-
-    .popUpThree-form-phone-container-left {
-        min-width: 68px;
+        width: 120px;
     }
 
     .popUpThree-form-phone-container-right {
-        max-width: 120px;
-    }
-
-    .popUpThree-form-email-container-left {
-        min-width: 68px;
+        width: 80px;
     }
 
     .popUpThree-form-email-container-right {
-        max-width: 120px;
+        width: 120px;
     }
 
     .popUpThree-form-text {
@@ -752,7 +745,7 @@
     }
 
     .popUpThree-form-text-container textarea {
-        width: auto;
+        width: 220px;
     }
 }
 

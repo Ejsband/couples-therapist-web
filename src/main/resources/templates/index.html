@@ -34,9 +34,9 @@
                 <div class="popUp-agreement-text">
                     <span th:utext="${policy.getValue()}"></span>
                 </div>
-                <div class="popUp-agreement-button">
+                <a class="popUp-agreement-button" th:href="@{/custom/file/agreement.pdf}" download onclick="hideElement('.popUp', 'closePopUp 0.4s ease', 'none', 380);">
                     <span>Скачать в PDF</span>
-                </div>
+                </a>
             </div>
         </div>
 
@@ -79,27 +79,27 @@
                 <h3 class="popUpThree-form-title">Запись на консультацию</h3>
                 <div class="popUpThree-form-name">
                     <div class="popUpThree-form-name-container">
-                        <span class="popUpThree-form-name-container-left">Имя <sup>*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="popUpThree-form-name-container-left">Имя <sup>*</sup></span>
                         <label class="popUpThree-form-name-container-right">
-                            <input type="text">
+                            <input class="popUpThree-form-name-container-right-input" type="text" size="16" pattern="[A-Za-zА-Яа-яЁё]" onkeydown="return /[A-Za-zА-Яа-яЁё]/i.test(event.key)" onkeypress="limitText(this, 49);">
                         </label>
                     </div>
                     <hr noshade>
                 </div>
                 <div class="popUpThree-form-phone">
                     <div class="popUpThree-form-phone-container">
-                        <span class="popUpThree-form-phone-container-left">+7 <sup>*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="popUpThree-form-phone-container-left">+7 <sup>*</sup></span>
                         <label class="popUpThree-form-phone-container-right">
-                            <input type="text">
+                            <input class="popUpThree-form-phone-container-right-input" type="number" size="16" pattern="[0-9]" onkeydown="limitText(this, 9);">
                         </label>
                     </div>
                     <hr noshade>
                 </div>
                 <div class="popUpThree-form-email">
                     <div class="popUpThree-form-email-container">
-                        <span class="popUpThree-form-email-container-left">e-mail <sup>*</sup>&nbsp;&nbsp;&nbsp;</span>
+                        <span class="popUpThree-form-email-container-left">e-mail <sup>*</sup></span>
                         <label class="popUpThree-form-email-container-right">
-                            <input type="text">
+                            <input class="popUpThree-form-email-container-right-input" type="email" size="16" onkeydown="limitText(this, 99);">
                         </label>
                     </div>
                     <hr noshade>

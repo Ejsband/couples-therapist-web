@@ -79,12 +79,19 @@
                     <a th:href="@{'mailto:' + ${email.getValue()}}" class="header-wrapper-left-contacts-email" th:utext="${email.getValue()}"></a>
                 </div>
             </div>
+            <div class="header-wrapper-center">
+                <a th:href="@{'tel:' + ${phone.getValue()}}" class="header-wrapper-center-phone" th:utext="${phone.getValue()}"></a>
+                <a th:href="@{'mailto:' + ${email.getValue()}}" class="header-wrapper-center-email" th:utext="${email.getValue()}"></a>
+            </div>
             <div class="header-wrapper-right">
                 <nav class="header-wrapper-right-menu">
                     <a th:href="@{'/instruction'}">Инструкция</a>
                 </nav>
                 <div class="header-wrapper-right-button" onclick="showElement('.popUp','flex', 'openPopUp 0.4s ease');">
                     <span>Информированное согласие</span>
+                </div>
+                <div class="header-wrapper-right-icon">
+                    <img alt="" th:src="@{/custom/img/agreement.svg}" onclick="showElement('.popUp','flex', 'openPopUp 0.4s ease');">
                 </div>
             </div>
         </div>
@@ -100,6 +107,10 @@
                 <a class="footer-wrapper-social-ig" th:href="@{'https://www.instagram.com/v_n_moroz/'}" target="_blank"><img th:src="@{/custom/img/ig.svg}" alt=""></a>
                 <a class="footer-wrapper-social-vk" th:href="@{'https://vk.com/moroz_n_v'}" target="_blank"><img th:src="@{/custom/img/vk.svg}" alt=""></a>
                 <a class="footer-wrapper-social-tg" th:href="@{'https://t.me/morozvn'}" target="_blank"><img th:src="@{/custom/img/tg.svg}" alt=""></a>
+            </div>
+            <div class="footer-wrapper-contacts">
+                <a th:href="@{'tel:' + ${phone.getValue()}}" class="header-wrapper-left-contacts-phone" th:utext="${phone.getValue()}"></a>
+                <a th:href="@{'mailto:' + ${email.getValue()}}" class="header-wrapper-left-contacts-email" th:utext="${email.getValue()}"></a>
             </div>
             <a class="footer-wrapper-policy" onclick="showElement('.popUpTwo','flex', 'openPopUp 0.4s ease');">Пользовательское соглашение</a>
             <span class="footer-wrapper-copyright"></span>

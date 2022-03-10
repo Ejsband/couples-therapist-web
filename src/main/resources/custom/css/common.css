@@ -50,8 +50,8 @@ html {
 /* ---------------------------------------------------------------------------------------------------------------------  Variables start */
 
 :root {
-    --colorOne: #3272ff;
-    --colorTwo: #2738a7;
+    --colorOne: #995900;
+    --colorTwo: #ba8f5f;
     --colorThree: #eff2f7;
     --colorFour: #0e0e0e;
 
@@ -98,7 +98,14 @@ header {
 }
 
 .header-wrapper-left-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-wrapper-left-logo img {
     width: 55px;
+    height: 55px;
 }
 
 .header-wrapper-left-contacts {
@@ -247,6 +254,17 @@ footer {
 /* --------------------------------------------------------------------------------------------------------------------- Footer end */
 
 
+/* ---------------------------------------------------------------------------------------------------------------------  Input start */
+
+.popUpThree-form-phone-container-right-input::-webkit-outer-spin-button,
+.popUpThree-form-phone-container-right-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------  Input end */
+
+
 /* ---------------------------------------------------------------------------------------------------------------------  ScrollBar start */
 
 .popUp-agreement-text::-webkit-scrollbar, .popUpTwo-policy-text::-webkit-scrollbar, .popUpThree-form-text-container textarea::-webkit-scrollbar {
@@ -373,7 +391,7 @@ footer {
     height: var(--buttonHeight);
     border-radius: var(--butttonBorderRadius);
     font-size: var(--buttonFontSize);
-    cursor: pointer;
+    text-decoration: none;
     background: var(--colorOne);
     transition: var(--animation);
 }
@@ -532,6 +550,10 @@ footer {
 
 @media screen and (max-width:1024px) and (min-width: 768px) {
 
+    header {
+        position: relative;
+    }
+
     .header-wrapper-left {
         margin-left: 15px;
     }
@@ -544,8 +566,8 @@ footer {
 @media screen and (max-width:767px) and (min-width: 0px) {
 
     .body {
-        padding-bottom: 190px;
-    }
+         padding-bottom: 210px;
+     }
 
     header {
         position: relative;
@@ -602,7 +624,15 @@ footer {
     }
 
     footer {
-        height: 190px;
+        height: 210px;
+    }
+
+    .footer-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .footer-wrapper-social {
+        margin-top: 20px;
     }
 
     .footer-wrapper-contacts {
@@ -639,4 +669,3 @@ footer {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------  Adaptive end */
-
