@@ -21,6 +21,10 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public void save(Client client) {
-        clientRepository.save(client);
+        try {
+            clientRepository.findByPhoneAndEmail(client.getPhone(), client.getEmail());
+        } catch (Exception e) {
+            clientRepository.save(client);
+        }
     }
 }

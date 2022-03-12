@@ -22,7 +22,7 @@ public class MainController {
         this.serviceService = serviceService;
     }
 
-    @GetMapping
+    @GetMapping("/")
     public String getIndexPage(Model model) {
         model.addAttribute("policy", agreementService.findByName("policy"));
         model.addAttribute("phone", contactService.findByName("phone"));

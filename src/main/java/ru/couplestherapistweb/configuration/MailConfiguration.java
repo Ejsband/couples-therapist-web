@@ -5,13 +5,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import ru.couplestherapistweb.service.MailServerService;
 
 import java.util.Properties;
 
 @Configuration
-@EnableWebMvc
 public class MailConfiguration {
 
     private final MailServerService mailServerService;

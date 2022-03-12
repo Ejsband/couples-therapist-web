@@ -54,17 +54,14 @@ public class DataController {
         String id = UUID.randomUUID().toString();
         Appeal appeal = new Appeal(id, name, phone, email, text, LocalDateTime.now());
         MailUser mailUser = mailUserService.findByName("info");
-
         appealService.save(appeal);
         clientService.save(new Client(id, name, phone, email));
         deliveryService.sendEmail(mailUser.getSender(), mailUser.getReceiver(), mailUser.getSubject(), appeal);
-
         model.addAttribute("policy", agreementService.findByName("policy"));
         model.addAttribute("phone", contactService.findByName("phone"));
         model.addAttribute("email", contactService.findByName("email"));
         model.addAttribute("individual", serviceService.findByName("individual"));
         model.addAttribute("group", serviceService.findByName("group"));
-
         return "index";
     }
 }
