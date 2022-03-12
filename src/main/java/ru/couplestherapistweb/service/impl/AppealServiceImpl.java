@@ -6,9 +6,11 @@ import ru.couplestherapistweb.entity.Appeal;
 import ru.couplestherapistweb.repository.AppealRepository;
 import ru.couplestherapistweb.service.AppealService;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
+@Transactional
 public class AppealServiceImpl implements AppealService {
 
     private final AppealRepository appealRepository;

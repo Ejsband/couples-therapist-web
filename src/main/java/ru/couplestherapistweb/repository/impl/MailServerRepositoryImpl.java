@@ -1,26 +1,25 @@
 package ru.couplestherapistweb.repository.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.stereotype.Repository;
-import ru.couplestherapistweb.entity.Service;
-import ru.couplestherapistweb.repository.ServiceRepository;
+import ru.couplestherapistweb.entity.MailServer;
+import ru.couplestherapistweb.repository.MailServerRepository;
 
 import javax.persistence.EntityManager;
 
 @Repository
-public class ServiceRepositoryImpl implements ServiceRepository {
+public class MailServerRepositoryImpl implements MailServerRepository {
 
     private final EntityManager entityManager;
 
     @Autowired
-    public ServiceRepositoryImpl(EntityManager entityManager) {
+    public MailServerRepositoryImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
     @Override
-    public Service findByName(String name) {
-        return entityManager.createQuery("SELECT s FROM Service s WHERE s.name = :name", Service.class)
+    public MailServer findByName(String name) {
+        return entityManager.createQuery("SELECT m FROM MailServer m WHERE m.name = :name", MailServer.class)
                 .setParameter("name", name)
                 .getSingleResult();
     }

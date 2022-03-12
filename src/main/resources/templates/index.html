@@ -77,41 +77,43 @@
                     </div>
                 </div>
                 <h3 class="popUpThree-form-title">Запись на консультацию</h3>
-                <div class="popUpThree-form-name">
-                    <div class="popUpThree-form-name-container">
-                        <span class="popUpThree-form-name-container-left">Имя <sup>*</sup></span>
-                        <label class="popUpThree-form-name-container-right">
-                            <input class="popUpThree-form-name-container-right-input" type="text" size="16" pattern="[A-Za-zА-Яа-яЁё]" onkeydown="return /[A-Za-zА-Яа-яЁё]/i.test(event.key)" onkeypress="limitText(this, 49);">
+                <form method="post" action="/appeal">
+                    <div class="popUpThree-form-name">
+                        <div class="popUpThree-form-name-container">
+                            <span class="popUpThree-form-name-container-left">Имя <sup>*</sup></span>
+                            <label class="popUpThree-form-name-container-right">
+                                <input class="popUpThree-form-name-container-right-input" type="text" size="16" name="name" onkeydown="return /[A-Za-zА-Яа-яЁё]/i.test(event.key)" onkeypress="limitText(this, 49);">
+                            </label>
+                        </div>
+                        <hr noshade>
+                    </div>
+                    <div class="popUpThree-form-phone">
+                        <div class="popUpThree-form-phone-container">
+                            <span class="popUpThree-form-phone-container-left">+7 <sup>*</sup></span>
+                            <label class="popUpThree-form-phone-container-right">
+                                <input class="popUpThree-form-phone-container-right-input" type="number" size="16" name="phone" onkeydown="limitText(this, 9);">
+                            </label>
+                        </div>
+                        <hr noshade>
+                    </div>
+                    <div class="popUpThree-form-email">
+                        <div class="popUpThree-form-email-container">
+                            <span class="popUpThree-form-email-container-left">e-mail <sup>*</sup></span>
+                            <label class="popUpThree-form-email-container-right">
+                                <input class="popUpThree-form-email-container-right-input" type="email" size="16" name="email" onkeydown="limitText(this, 99);">
+                            </label>
+                        </div>
+                        <hr noshade>
+                    </div>
+                    <div class="popUpThree-form-text">
+                        <label class="popUpThree-form-text-container">
+                            <textarea placeholder="Сообщение" name="text"></textarea>
                         </label>
                     </div>
-                    <hr noshade>
-                </div>
-                <div class="popUpThree-form-phone">
-                    <div class="popUpThree-form-phone-container">
-                        <span class="popUpThree-form-phone-container-left">+7 <sup>*</sup></span>
-                        <label class="popUpThree-form-phone-container-right">
-                            <input class="popUpThree-form-phone-container-right-input" type="number" size="16" pattern="[0-9]" onkeydown="limitText(this, 9);">
-                        </label>
+                    <div class="popUpThree-form-button">
+                        <input class="popUpThree-form-button-input" type="submit" value="Отпраить">
                     </div>
-                    <hr noshade>
-                </div>
-                <div class="popUpThree-form-email">
-                    <div class="popUpThree-form-email-container">
-                        <span class="popUpThree-form-email-container-left">e-mail <sup>*</sup></span>
-                        <label class="popUpThree-form-email-container-right">
-                            <input class="popUpThree-form-email-container-right-input" type="email" size="16" onkeydown="limitText(this, 99);">
-                        </label>
-                    </div>
-                    <hr noshade>
-                </div>
-                <div class="popUpThree-form-text">
-                    <label class="popUpThree-form-text-container">
-                        <textarea placeholder="Сообщение"></textarea>
-                    </label>
-                </div>
-                <div class="popUpThree-form-button">
-                    <span>Отправить</span>
-                </div>
+                </form>
             </div>
         </div>
 
@@ -186,7 +188,7 @@
                         </div>
                         <div class="body-secondBlock-container-left-bottom">
                             <div class="body-secondBlock-container-left-bottom-text">
-                                <p><b th:utext="${individual.getPrice()}"></b><b>руб. / </b><b th:utext="${individual.getDuration()}"></b><b> мин.</b></p>
+                                <p><b th:utext="${individual.getPrice()}"></b><b> руб. / </b><b th:utext="${individual.getDuration()}"></b><b> мин.</b></p>
                             </div>
                         </div>
                     </div>
@@ -211,7 +213,7 @@
                         </div>
                         <div class="body-secondBlock-container-right-bottom">
                             <div class="body-secondBlock-container-right-bottom-text">
-                                <p><b th:utext="${group.getPrice()}"></b><b>руб. / </b><b th:utext="${group.getDuration()}"></b><b> мин.</b></p>
+                                <p><b th:utext="${group.getPrice()}"></b><b> руб. / </b><b th:utext="${group.getDuration()}"></b><b> мин.</b></p>
                             </div>
                         </div>
                     </div>

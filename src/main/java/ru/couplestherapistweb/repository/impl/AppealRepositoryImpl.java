@@ -1,14 +1,14 @@
 package ru.couplestherapistweb.repository.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import ru.couplestherapistweb.entity.Appeal;
 import ru.couplestherapistweb.repository.AppealRepository;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 
-@Service
+@Repository
 public class AppealRepositoryImpl implements AppealRepository {
 
     private final EntityManager entityManager;

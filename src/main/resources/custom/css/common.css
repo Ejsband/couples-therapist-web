@@ -1,5 +1,31 @@
 @charset "UTF-8";
 
+/* ---------------------------------------------------------------------------------------------------------------------  Variables start */
+
+:root {
+    --textColorOne: #343a3c;
+    --textColorTwo: #ffffff;
+
+    --colorOne: #2465cb;
+    --colorTwo: #995900;
+    --colorThree: #eff2f7;
+    --colorFour: #000000;
+    --colorFive: #ffffff;
+
+    --buttonHeight: 32px;
+    --butttonBorderRadius: 15px;
+    --buttonFontSize: 1.2rem;
+
+    --textFontSize: 1.1rem;
+    --textLineHeight: 1.3rem;
+    --textFontFamily: 'Gilroy', sans-serif;
+
+    --animation: all 0.3s ease-in-out;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------  Variables end */
+
+
 /* --------------------------------------------------------------------------------------------------------------------- General start */
 
 @keyframes openPopUp {
@@ -32,7 +58,8 @@
 
 html {
     font-size: 14px;
-    font-family: 'Gilroy', sans-serif;
+    color: var(--textColorOne);
+    font-family: var(--textFontFamily);
 }
 
 .page-wrapper {
@@ -47,28 +74,6 @@ html {
 /* --------------------------------------------------------------------------------------------------------------------- General end */
 
 
-/* ---------------------------------------------------------------------------------------------------------------------  Variables start */
-
-:root {
-    --colorOne: #995900;
-    --colorTwo: #ba8f5f;
-    --colorThree: #eff2f7;
-    --colorFour: #0e0e0e;
-
-    --buttonHeight: 32px;
-    --butttonBorderRadius: 15px;
-    --buttonFontSize: 1.2rem;
-
-    --textFontSize: 1.1rem;
-    --textLineHeight: 1.3rem;
-    --textFontFamily: 'Gilroy', sans-serif;
-
-    --animation: all 0.3s ease-in-out;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------  Variables end */
-
-
 /* --------------------------------------------------------------------------------------------------------------------- Header start */
 
 header {
@@ -78,7 +83,7 @@ header {
     position: fixed;
     width: 100%;
     height: 70px;
-    background: #ffffff;
+    background: var(--colorFive);
     box-shadow: 0 0 25px 5px rgb(0, 0, 0, 0.15);
 }
 
@@ -119,7 +124,7 @@ header {
 
 .header-wrapper-left-contacts a {
     text-decoration: none;
-    color: black;
+    color: var(--textColorOne);
 }
 
 .header-wrapper-left-contacts-email {
@@ -147,7 +152,7 @@ header {
 .header-wrapper-right-menu a {
     display: block;
     text-decoration: none;
-    color: black;
+    color: var(--textColorOne);
     font-size: var(--buttonFontSize);
     transition: var(--animation);
 }
@@ -175,7 +180,7 @@ header {
 }
 
 .header-wrapper-right-button span {
-    color: #FFFFFF;
+    color: var(--textColorTwo);
     font-weight: 500;
 }
 
@@ -206,7 +211,7 @@ footer {
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: var(--textColorTwo);
 }
 
 .footer-wrapper-social {
@@ -304,7 +309,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 500px;
-    background-color: #FFFFFF;
+    background-color: var(--colorFive);
     border-radius: 25px;
     padding-bottom: 20px;
     box-shadow: 0 0 10px 5px rgb(255, 255, 255, 0.15);
@@ -371,7 +376,7 @@ footer {
 .popUp-agreement-text {
     height: 340px;
     width: 480px;
-    background: #FFFFFF;
+    background-color: var(--colorFive);
     overflow-y: scroll;
 }
 
@@ -392,6 +397,7 @@ footer {
     border-radius: var(--butttonBorderRadius);
     font-size: var(--buttonFontSize);
     text-decoration: none;
+    cursor: pointer;
     background: var(--colorOne);
     transition: var(--animation);
 }
@@ -404,7 +410,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
+    color: var(--textColorTwo);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------  Agreement end */
@@ -429,7 +435,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 500px;
-    background-color: #FFFFFF;
+    background-color: var(--colorFive);
     border-radius: 25px;
     padding-bottom: 20px;
     box-shadow: 0 0 10px 5px rgb(255, 255, 255, 0.15);
@@ -496,7 +502,7 @@ footer {
 .popUpTwo-policy-text {
     height: 340px;
     width: 480px;
-    background: #FFFFFF;
+    background-color: var(--colorFive);
     overflow-y: scroll;
 }
 
@@ -529,7 +535,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
+    color: var(--textColorTwo);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------  Policy end */
@@ -591,7 +597,7 @@ footer {
 
     .header-wrapper-center a {
         text-decoration: none;
-        color: #000000;
+        color: var(--textColorOne);
     }
 
     .header-wrapper-right-menu {
@@ -645,7 +651,7 @@ footer {
 
     }
     .footer-wrapper-contacts a {
-        color: #eff2f7;
+        color: var(--textColorTwo);
         text-decoration: none;
     }
 

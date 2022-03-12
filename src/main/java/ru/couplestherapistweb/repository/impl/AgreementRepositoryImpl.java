@@ -1,13 +1,13 @@
 package ru.couplestherapistweb.repository.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import ru.couplestherapistweb.entity.Agreement;
 import ru.couplestherapistweb.repository.AgreementRepository;
 
 import javax.persistence.EntityManager;
 
-@Service
+@Repository
 public class AgreementRepositoryImpl implements AgreementRepository {
 
     private final EntityManager entityManager;

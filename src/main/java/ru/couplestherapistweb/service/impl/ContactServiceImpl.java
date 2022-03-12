@@ -6,7 +6,10 @@ import ru.couplestherapistweb.entity.Contact;
 import ru.couplestherapistweb.repository.ContactRepository;
 import ru.couplestherapistweb.service.ContactService;
 
+import javax.transaction.Transactional;
+
 @Service
+@Transactional
 public class ContactServiceImpl implements ContactService {
 
     private final ContactRepository contactRepository;

@@ -6,8 +6,11 @@ import ru.couplestherapistweb.entity.Service;
 import ru.couplestherapistweb.repository.ServiceRepository;
 import ru.couplestherapistweb.service.ServiceService;
 
+import javax.transaction.Transactional;
+
 
 @org.springframework.stereotype.Service
+@Transactional
 public class ServiceServiceImpl implements ServiceService {
 
     private final ServiceRepository serviceRepository;

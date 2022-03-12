@@ -6,7 +6,10 @@ import ru.couplestherapistweb.entity.Agreement;
 import ru.couplestherapistweb.repository.AgreementRepository;
 import ru.couplestherapistweb.service.AgreementService;
 
+import javax.transaction.Transactional;
+
 @Service
+@Transactional
 public class AgreementServiceImpl implements AgreementService {
 
     private final AgreementRepository agreementRepository;

@@ -1,13 +1,13 @@
 package ru.couplestherapistweb.repository.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import ru.couplestherapistweb.entity.Client;
 import ru.couplestherapistweb.repository.ClientRepository;
 
 import javax.persistence.EntityManager;
 
-@Service
+@Repository
 public class ClientRepositoryImpl implements ClientRepository {
 
     private final EntityManager entityManager;

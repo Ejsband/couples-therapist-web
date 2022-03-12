@@ -6,7 +6,10 @@ import ru.couplestherapistweb.entity.Client;
 import ru.couplestherapistweb.repository.ClientRepository;
 import ru.couplestherapistweb.service.ClientService;
 
+import javax.transaction.Transactional;
+
 @Service
+@Transactional
 public class ClientServiceImpl implements ClientService {
 
     private final ClientRepository clientRepository;

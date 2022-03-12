@@ -7,8 +7,7 @@
     flex-direction: row;
     justify-content: center;
     padding-top: 70px;
-    /*width: 100%;*/
-    background: #030303;
+    background-color: var(--colorFour);
 }
 
 .body-firstBlock-container {
@@ -18,7 +17,7 @@
     align-items: center;
     margin-right: 50px;
     max-width: 650px;
-    color: #ffffff;
+    color: var(--textColorTwo);
 }
 
 .body-firstBlock-container h1 {
@@ -58,7 +57,7 @@
 }
 
 .body-firstBlock-button-text {
-    color: #FFFFFF;
+    color: var(--textColorTwo);
 }
 
 .body-firstBlock-photo img {
@@ -71,7 +70,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: #ffffff;
+    background-color: var(--colorFive);
 }
 
 .body-secondBlock-title {
@@ -320,7 +319,7 @@
 }
 
 .body-thirdBlock-container-left-button span {
-    color: #e3e4e7;
+    color: var(--textColorTwo);
 }
 
 .body-thirdBlock-container-right img {
@@ -349,7 +348,7 @@
     justify-content: center;
     align-items: center;
     width: 500px;
-    background-color: #FFFFFF;
+    background-color: var(--colorFive);
     border-radius: 25px;
     padding-bottom: 20px;
     box-shadow: 0 0 10px 5px rgb(255, 255, 255, 0.15);
@@ -411,6 +410,14 @@
     margin: 25px;
     line-height: 1.5rem;
     text-transform: uppercase;
+}
+
+.popUpThree-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
 }
 
 .popUpThree-form-name {
@@ -580,11 +587,11 @@
     background: var(--colorTwo);
 }
 
-.popUpThree-form-button span {
+.popUpThree-form-button-input {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
+    color: var(--textColorTwo);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------  Form end */
