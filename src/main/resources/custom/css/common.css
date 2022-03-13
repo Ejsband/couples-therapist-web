@@ -13,7 +13,7 @@
     --colorFive: #ffffff;
 
     --buttonHeight: 32px;
-    --butttonBorderRadius: 15px;
+    --buttonBorderRadius: 15px;
     --buttonFontSize: 1.2rem;
 
     --textFontSize: 1.1rem;
@@ -168,7 +168,7 @@ header {
     width: 280px;
     height: var(--buttonHeight);
     background: var(--colorOne);
-    border-radius: var(--butttonBorderRadius);
+    border-radius: var(--buttonBorderRadius);
     font-size: var(--buttonFontSize);
     cursor: pointer;
     margin-left: 30px;
@@ -394,7 +394,7 @@ footer {
     margin-top: 20px;
     width: 180px;
     height: var(--buttonHeight);
-    border-radius: var(--butttonBorderRadius);
+    border-radius: var(--buttonBorderRadius);
     font-size: var(--buttonFontSize);
     text-decoration: none;
     cursor: pointer;
@@ -520,7 +520,7 @@ footer {
     margin-top: 20px;
     width: 180px;
     height: var(--buttonHeight);
-    border-radius: var(--butttonBorderRadius);
+    border-radius: var(--buttonBorderRadius);
     font-size: var(--buttonFontSize);
     cursor: pointer;
     background: var(--colorOne);

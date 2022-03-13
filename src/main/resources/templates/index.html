@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <h3 class="popUpThree-form-title">Запись на консультацию</h3>
-                <form method="post" action="/appeal">
+                <form class="popUpThree-form-form" method="post" action="/appeal">
                     <div class="popUpThree-form-name">
                         <div class="popUpThree-form-name-container">
                             <span class="popUpThree-form-name-container-left">Имя <sup>*</sup></span>
@@ -110,11 +110,12 @@
                     </div>
                     <div class="popUpThree-form-text">
                         <label class="popUpThree-form-text-container">
-                            <textarea placeholder="Сообщение" name="text"></textarea>
+                            <textarea class="popUpThree-form-text-container-textarea" placeholder="Сообщение" name="text" onkeydown="limitText(this, 4999);"></textarea>
                         </label>
                     </div>
                     <div class="popUpThree-form-button">
-                        <input class="popUpThree-form-button-input" type="submit" value="Отпраить">
+                        <input class="popUpThree-form-button-input" type="button" value="Отправить"
+                               onclick="sendForm();">
                     </div>
                 </form>
             </div>

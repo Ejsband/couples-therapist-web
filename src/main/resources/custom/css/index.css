@@ -45,7 +45,7 @@
     margin-top: 30px;
     width: 280px;
     height: var(--buttonHeight);
-    border-radius: var(--butttonBorderRadius);
+    border-radius: var(--buttonBorderRadius);
     font-size: var(--buttonFontSize);
     cursor: pointer;
     background: var(--colorOne);
@@ -306,7 +306,7 @@
     align-items: center;
     background-color: var(--colorOne);
     height: var(--buttonHeight);
-    border-radius: var(--butttonBorderRadius);
+    border-radius: var(--buttonBorderRadius);
     font-size: var(--buttonFontSize);
     width: 240px;
     margin-top: 20px;
@@ -576,15 +576,7 @@
     margin-top: 20px;
     width: 180px;
     height: var(--buttonHeight);
-    border-radius: var(--butttonBorderRadius);
-    font-size: var(--buttonFontSize);
-    cursor: pointer;
-    background: var(--colorOne);
-    transition: var(--animation);
-}
-
-.popUpThree-form-button:hover {
-    background: var(--colorTwo);
+    border-radius: var(--buttonBorderRadius);
 }
 
 .popUpThree-form-button-input {
@@ -592,6 +584,18 @@
     justify-content: center;
     align-items: center;
     color: var(--textColorTwo);
+    background-color: var(--colorOne);
+    width: 100%;
+    height: 100%;
+    border-radius: var(--buttonBorderRadius);
+    border: none;
+    font-size: var(--buttonFontSize);
+    cursor: pointer;
+    transition: var(--animation);
+}
+
+.popUpThree-form-button-input:hover {
+    background: var(--colorTwo);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------  Form end */
