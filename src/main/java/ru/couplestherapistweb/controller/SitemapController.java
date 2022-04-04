@@ -10,19 +10,19 @@ public class SitemapController {
     @ResponseBody
     public String sitemap() {
         return """
-                <?xml version="1.0" encoding="UTF-8"?>
+                <?xml version="1.0" encoding="utf-8"?>
                 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
                    <url>
                       <loc>https://vladimirmoroz.ru/</loc>
-                      <lastmod>2022-03-15</lastmod>
+                      <lastmod>2022-04</lastmod>
                       <changefreq>monthly</changefreq>
                       <priority>1.0</priority>
                    </url>
                    <url>
                       <loc>https://vladimirmoroz.ru/instruction</loc>
-                      <lastmod>2022-03-15</lastmod>
+                      <lastmod>2022-04</lastmod>
                       <changefreq>monthly</changefreq>
-                      <priority>1.0</priority>
+                      <priority>0.9</priority>
                    </url>
                 </urlset>""";
     }

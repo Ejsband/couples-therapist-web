@@ -26,14 +26,22 @@ function limitText(limitField, limitNum) {
 
 // ---------------------------------------------------------------------------------------------------------------------  Restrict e-+ Symbols in Phone Input
 
-document.querySelector('.popUpThree-form-phone-container-right-input').addEventListener("keypress", function (evt) {
-    if (evt.which !== 8 && evt.which !== 0 && evt.which < 48 || evt.which > 57)
-    {
-        evt.preventDefault();
-    }
-});
+// document.querySelector('.popUpThree-form-phone-container-right-input').addEventListener("keypress", function (evt) {
+//     if (evt.which !== 8 && evt.which !== 0 && evt.which < 48 || evt.which > 57)
+//     {
+//         evt.preventDefault();
+//     }
+// });
 
 // ---------------------------------------------------------------------------------------------------------------------  Send Form Function
+
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+}
 
 function sendForm() {
 
@@ -43,13 +51,13 @@ function sendForm() {
     let phoneText = document.querySelector('.popUpThree-form-phone-container-left');
     let emailInput = document.querySelector('.popUpThree-form-email-container-right-input');
     let emailText = document.querySelector('.popUpThree-form-email-container-left');
-    let textarea = document.querySelector('.popUpThree-form-text-container-textarea');
-    let textareaContainer = document.querySelector('.popUpThree-form-text');
+    // let textarea = document.querySelector('.popUpThree-form-text-container-textarea');
+    // let textareaContainer = document.querySelector('.popUpThree-form-text');
 
     let nameFlag = false;
     let phoneFlag = false;
     let emailFlag = false;
-    let textFlag = false;
+    // let textFlag = false;
 
     if (nameInput.value === '') {
         nameText.style.color = 'red';
@@ -74,14 +82,15 @@ function sendForm() {
         emailFlag = true;
     }
 
-    if (textarea.value === '') {
-        textareaContainer.style.border = 'solid 1px red';
-    } else {
-        textareaContainer.style.border = 'solid 1px var(--textColorOne)';
-        textFlag = true;
-    }
+    // if (textarea.value === '') {
+    //     textareaContainer.style.border = 'solid 1px red';
+    // } else {
+    //     textareaContainer.style.border = 'solid 1px var(--textColorOne)';
+    //     textFlag = true;
+    // }
 
-    if (nameFlag === true && phoneFlag === true && emailFlag === true && textFlag === true) {
+    if (nameFlag === true && phoneFlag === true && emailFlag === true) {
         let response = fetch('/appeal', {method: 'POST', body: new FormData(document.querySelector('.popUpThree-form-form'))});
+        hideElement('.popUpThree', 'closePopUp 0.5s ease', 'none', 380);
     }
 }

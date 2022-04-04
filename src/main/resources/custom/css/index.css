@@ -412,7 +412,7 @@
     text-transform: uppercase;
 }
 
-.popUpThree-form form {
+.popUpThree-form-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -437,7 +437,7 @@
 
 .popUpThree-form-name-container-left {
     margin-bottom: 4px;
-    width: 62px;
+    width: 80px;
     font-size: var(--textFontSize);
     line-height: var(--textLineHeight);
     font-family: var(--textFontFamily);
@@ -447,8 +447,13 @@
     color: var(--colorOne);
 }
 
+.popUpThree-form-name-container-right {
+    width: 100%;
+}
+
 .popUpThree-form-name-container-right input {
     height: 26px;
+    width: 100%;
     outline: none;
     border: none;
     font-size: var(--textFontSize);
@@ -480,7 +485,7 @@
 
 .popUpThree-form-phone-container-left {
     margin-bottom: 4px;
-    width: 62px;
+    width: 80px;
     font-size: var(--textFontSize);
     line-height: var(--textLineHeight);
     font-family: var(--textFontFamily);
@@ -490,8 +495,13 @@
     color: var(--colorOne);
 }
 
+.popUpThree-form-phone-container-right {
+    width: 100%;
+}
+
 .popUpThree-form-phone-container-right input {
     height: 26px;
+    width: 100%;
     outline: none;
     border: none;
     font-size: var(--textFontSize);
@@ -523,7 +533,7 @@
 
 .popUpThree-form-email-container-left {
     margin-bottom: 4px;
-    width: 62px;
+    width: 80px;
     font-size: var(--textFontSize);
     line-height: var(--textLineHeight);
     font-family: var(--textFontFamily);
@@ -533,8 +543,13 @@
     color: var(--colorOne);
 }
 
+.popUpThree-form-email-container-right {
+    width: 100%;
+}
+
 .popUpThree-form-email-container-right input {
     height: 26px;
+    width: 100%;
     outline: none;
     border: none;
     font-size: var(--textFontSize);
@@ -558,8 +573,15 @@
     border: solid 1px;
 }
 
+.popUpThree-form-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .popUpThree-form-text-container textarea {
-    width: 380px;
+    width: 95%;
     height: 85px;
     outline: none;
     border: none;
@@ -655,11 +677,7 @@
     }
 
     .popUpThree-form {
-        width: 65%;
-    }
-
-    .popUpThree-form-text-container textarea {
-        width: 390px;
+        width: 60%;
     }
 }
 
@@ -739,25 +757,11 @@
         width: 95%;
     }
 
-    .popUpThree-form-name-container-right {
-        width: 120px;
-    }
-
-    .popUpThree-form-phone-container-right {
-        width: 80px;
-    }
-
-    .popUpThree-form-email-container-right {
-        width: 120px;
-    }
-
-    .popUpThree-form-text {
-        width: 80%;
-    }
-
-    .popUpThree-form-text-container textarea {
-        width: 220px;
+    .popUpThree-form-form {
+        width: 100%;
     }
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------  Adaptive end */
+
+

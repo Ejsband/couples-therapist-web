@@ -12,7 +12,7 @@ public class RobotsController {
     public String robots() {
         return """
                 User-agent: *
-                Host: https://www.vladimirmoroz.ru
-                Sitemap: https://www.vladimirmoroz.ru/sitemap.xml""";
+                Host: https://vladimirmoroz.ru
+                Sitemap: https://vladimirmoroz.ru/sitemap.xml""";
     }
 }
