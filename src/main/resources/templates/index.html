@@ -12,8 +12,8 @@
 
     <link rel="preload" as="font" type="font/woff2" crossorigin th:href="@{custom/font/Gilroy-Regular.woff2}">
 
-    <link rel="stylesheet" type="text/css" th:href="@{/custom/css/common.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{/custom/css/index.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/custom/css/commonN.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/custom/css/indexN.css}">
 
     <meta name="description" content="Психологическое консультирование выглядит как обычная беседа, в нём присутствует обыденная речь, но эффект, который оно оставляет, зачастую не доступен в обычной беседе.">
     <meta name="keywords" content="мороз владимир, moroz vladimir, психологическое консультирование, психологическая помощь, консультация">
@@ -77,7 +77,7 @@
         <div class="popUpThree">
             <div class="popUpThree-form">
                 <div class="popUpThree-form-cross">
-                    <div class="popUpThree-form-cross-container" onclick="hideElement('.popUpThree', 'closePopUp 0.4s ease', 'none', 380);">
+                    <div class="popUpThree-form-cross-container" onclick="hideElement('.popUpThree', 'closePopUp 0.5s ease', 'none', 380); clearFormFields();">
                         <span class="popUpThree-form-cross-container-lineOne"></span>
                         <span class="popUpThree-form-cross-container-lineTwo"></span>
                     </div>
@@ -88,7 +88,7 @@
                         <div class="popUpThree-form-name-container">
                             <span class="popUpThree-form-name-container-left">Имя <sup>*</sup></span>
                             <label class="popUpThree-form-name-container-right">
-                                <input class="popUpThree-form-name-container-right-input" type="text" size="16" name="name" onkeydown="return /[A-Za-zА-Яа-яЁё]/i.test(event.key)" onkeypress="limitText(this, 49);">
+                                <input class="popUpThree-form-name-container-right-input" id="formName" type="text" name="name" onkeydown="return /[A-Za-zА-Яа-яЁё]/i.test(event.key)" onkeypress="limitText(this, 49);">
                             </label>
                         </div>
                         <hr noshade>
@@ -97,7 +97,7 @@
                         <div class="popUpThree-form-phone-container">
                             <span class="popUpThree-form-phone-container-left">Тел. <sup>*</sup></span>
                             <label class="popUpThree-form-phone-container-right">
-                                <input class="popUpThree-form-phone-container-right-input" type="number" size="16" name="phone" onkeydown="limitText(this, 15);">
+                                <input class="popUpThree-form-phone-container-right-input" id="formPhone" type="number" name="phone" onkeydown="limitText(this, 15);">
                             </label>
                         </div>
                         <hr noshade>
@@ -106,14 +106,14 @@
                         <div class="popUpThree-form-email-container">
                             <span class="popUpThree-form-email-container-left">e-mail <sup>*</sup></span>
                             <label class="popUpThree-form-email-container-right">
-                                <input class="popUpThree-form-email-container-right-input" type="email" size="16" name="email" onkeydown="limitText(this, 99);">
+                                <input class="popUpThree-form-email-container-right-input" id="formEmail" type="email" name="email" onkeydown="limitText(this, 99);">
                             </label>
                         </div>
                         <hr noshade>
                     </div>
                     <div class="popUpThree-form-text">
                         <label class="popUpThree-form-text-container">
-                            <textarea class="popUpThree-form-text-container-textarea" placeholder="Сообщение" name="text" onkeydown="limitText(this, 4999);"></textarea>
+                            <textarea class="popUpThree-form-text-container-textarea" id="formText" placeholder="Сообщение" name="text" onkeydown="limitText(this, 4999);"></textarea>
                         </label>
                     </div>
                     <div class="popUpThree-form-button">

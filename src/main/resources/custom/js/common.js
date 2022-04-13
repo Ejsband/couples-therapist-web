@@ -16,6 +16,18 @@ function hideElement(className, cssAnimationProperty, cssDisplayProperty, timeou
     setTimeout(() => { name.style.display = cssDisplayProperty;}, timeoutInMillis);
 }
 
+// ---------------------------------------------------------------------------------------------------------------------  Form clearing Function
+
+function clearFormFields() {
+    document.getElementById('formName').value = '';
+    document.getElementById('formPhone').value = '';
+    document.getElementById('formEmail').value = '';
+    document.getElementById('formText').value = '';
+    document.querySelector('.popUpThree-form-name-container-left').style.color = 'black';
+    document.querySelector('.popUpThree-form-phone-container-left').style.color = 'black';
+    document.querySelector('.popUpThree-form-email-container-left').style.color = 'black';
+}
+
 // ---------------------------------------------------------------------------------------------------------------------  Restrict Input Symbols Amount
 
 function limitText(limitField, limitNum) {
@@ -34,14 +46,6 @@ function limitText(limitField, limitNum) {
 // });
 
 // ---------------------------------------------------------------------------------------------------------------------  Send Form Function
-
-function sleep(milliseconds) {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-        currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
-}
 
 function sendForm() {
 
@@ -66,7 +70,7 @@ function sendForm() {
         nameFlag = true;
     }
 
-    if (phoneInput.value === '' || phoneInput.value.length < 10) {
+    if (phoneInput.value === '' || phoneInput.value.length < 7) {
         phoneText.style.color = 'red';
     } else {
         phoneText.style.color = 'var(--textColorOne)';
@@ -92,5 +96,6 @@ function sendForm() {
     if (nameFlag === true && phoneFlag === true && emailFlag === true) {
         let response = fetch('/appeal', {method: 'POST', body: new FormData(document.querySelector('.popUpThree-form-form'))});
         hideElement('.popUpThree', 'closePopUp 0.5s ease', 'none', 380);
+        clearFormFields();
     }
 }
