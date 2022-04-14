@@ -412,6 +412,12 @@
     text-transform: uppercase;
 }
 
+hr {
+    background-color: var(--textColorOne);
+    height: 1px;
+    border: 0;
+}
+
 .popUpThree-form-form {
     display: flex;
     flex-direction: column;
