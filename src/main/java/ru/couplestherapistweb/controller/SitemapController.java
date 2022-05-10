@@ -14,13 +14,13 @@ public class SitemapController {
                 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
                    <url>
                       <loc>https://vladimirmoroz.ru/</loc>
-                      <lastmod>2022-04</lastmod>
+                      <lastmod>2022-05-10</lastmod>
                       <changefreq>monthly</changefreq>
                       <priority>1.0</priority>
                    </url>
                    <url>
                       <loc>https://vladimirmoroz.ru/instruction</loc>
-                      <lastmod>2022-04</lastmod>
+                      <lastmod>2022-05-10</lastmod>
                       <changefreq>monthly</changefreq>
                       <priority>0.9</priority>
                    </url>

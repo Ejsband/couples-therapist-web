@@ -34,7 +34,7 @@ public class DeliveryServiceImpl implements DeliveryService {
                 %s
 
 
-                Сообщение автоматически сгенерировано сайтом www.vladimirmoroz.ru и не требует ответа.
+                Сообщение автоматически сгенерировано сайтом vladimirmoroz.ru и не требует ответа.
                 """, appeal.getName(), appeal.getPhone(), appeal.getEmail(), appeal.getText());
 
         MimeMessagePreparator mail = new MimeMessagePreparator() {

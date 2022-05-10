@@ -29,7 +29,7 @@ public class MainController {
         model.addAttribute("email", contactService.findByName("email"));
         model.addAttribute("individual", serviceService.findByName("individual"));
         model.addAttribute("group", serviceService.findByName("group"));
-        return "index";
+        return "indexR";
     }
 
     @GetMapping("/instruction")
@@ -37,6 +37,6 @@ public class MainController {
         model.addAttribute("policy", agreementService.findByName("policy"));
         model.addAttribute("phone", contactService.findByName("phone"));
         model.addAttribute("email", contactService.findByName("email"));
-        return "instruction";
+        return "instructionR";
     }
 }
