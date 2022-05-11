@@ -27,6 +27,7 @@
 :root {
     --textColorOne: #343a3c;
     --textColorTwo: #ffffff;
+    --textColorThree: #df5f5f;
 
     --colorOne: #2465cb;
     --colorTwo: #995900;
@@ -640,6 +641,7 @@ footer {
 
     .popUp-agreement-text {
         width: 95%;
+        height: 240px;
         overflow-x: hidden;
     }
 
@@ -649,6 +651,7 @@ footer {
 
     .popUpTwo-policy-text {
         width: 95%;
+        height: 240px;
         overflow-x: hidden;
     }
 
