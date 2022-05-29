@@ -41,13 +41,16 @@ public class DataController {
             @RequestParam String name,
             @RequestParam String phone,
             @RequestParam String email,
-            @RequestParam String text
+            @RequestParam String text,
+            @RequestParam String value
     ) {
-        String id = UUID.randomUUID().toString();
-        Appeal appeal = new Appeal(id, name, phone, email, text, LocalDateTime.now());
-        MailUser mailUser = mailUserService.findByName("info");
-        appealService.save(appeal);
-        clientService.save(new Client(id, name, phone, email));
-        deliveryService.sendEmail(mailUser.getSender(), mailUser.getReceiver(), mailUser.getSubject(), appeal);
+        if(value.equals("correct")) {
+            String id = UUID.randomUUID().toString();
+            Appeal appeal = new Appeal(id, name, phone, email, text, LocalDateTime.now());
+            MailUser mailUser = mailUserService.findByName("info");
+            appealService.save(appeal);
+            clientService.save(new Client(id, name, phone, email));
+            deliveryService.sendEmail(mailUser.getSender(), mailUser.getReceiver(), mailUser.getSubject(), appeal);
+        }
     }
 }

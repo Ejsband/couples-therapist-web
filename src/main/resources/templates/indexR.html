@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 882.8 641.3'%3E%3Cstyle%3E.favicon0%7Bfill:%23e6ebff%7D.favicon1%7Bfill:%2366a9ff%7D.favicon2%7Bfill:%23995900%7D.favicon3%7Bfill:%23002577%7D%3C/style%3E%3Cpath class='favicon0' d='M31.5 619.6H390V46H188.9L31.5 619.6z'/%3E%3Cpath class='favicon1' d='M593.1 619.6l200.6-444.5-74.4-164.6H432.8l74.4 165.1-200.7 444.5 286.6-.5z'/%3E%3Cpath class='favicon2' d='M406.4 619.6h43.2s-179-487.7-68.2-550.1c11.5-7.2 17.8-14.9 17.8-23.5h-265c0 10.1 9.1 19.7 25 26.9 204.4 123.8 247.2 546.7 247.2 546.7z'/%3E%3Cpath class='favicon3' d='M867.6 619.6L724.1 46h-215l143.5 573.6h215z'/%3E%3Cg%3E%3Cpath class='favicon0' d='M-266.1 243.9h27.5v-44H-254l-12.1 44z'/%3E%3Cpath class='favicon1' d='M-223 243.9l15.4-34.1-5.7-12.6h-22l5.7 12.6-15.4 34.1h22z'/%3E%3Cpath class='favicon2' d='M-237.3 243.9h3.3s-13.7-37.4-5.2-42.2c.9-.5 1.4-1.1 1.4-1.8h-20.4c0 .8.7 1.5 1.9 2.1 15.7 9.4 19 41.9 19 41.9z'/%3E%3Cpath class='favicon3' d='M-201.9 243.9l-11-44h-16.5l11 44h16.5z'/%3E%3C/g%3E%3C/svg%3E"/>
-    <link rel="preload" as="font" th:href="@{custom/font/roboto-regular.woff2}" type="font/woff2" crossorigin>
-    <link rel="stylesheet" type="text/css" th:href="@{/custom/css/commonR.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{/custom/css/indexR.css}">
+    <link rel="preload" as="font" href="/custom/font/roboto-regular.woff2" type="font/woff2" crossorigin>
+    <link rel="stylesheet" type="text/css" href="/custom/css/commonR.css">
+    <link rel="stylesheet" type="text/css" href="/custom/css/indexR.css">
     <meta name="description" content="Психологическое консультирование выглядит как обычная беседа, в нём присутствует обыденная речь, но эффект, который оно оставляет, зачастую не доступен в обычной беседе.">
     <meta name="keywords" content="мороз владимир, moroz vladimir, психологическое консультирование, психологическая помощь, консультация">
     <meta name="yandex-verification" content="0b84331689292901" />
@@ -29,7 +29,7 @@
           <div class="popUp-agreement-text">
             <span th:utext="${policy.getValue()}"></span>
           </div>
-          <a class="popUp-agreement-button" th:href="@{/custom/file/agreement.pdf}" download onclick="hideElement('.popUp', 'closePopUp 0.4s ease', 'none', 380);">
+          <a class="popUp-agreement-button" href="/custom/file/agreement.pdf" download onclick="hideElement('.popUp', 'closePopUp 0.4s ease', 'none', 380);">
             <span>Скачать в PDF</span>
           </a>
         </div>
@@ -77,7 +77,7 @@
               <div class="popUpThree-form-name-container">
                 <span class="popUpThree-form-name-container-left">Имя <sup>*</sup></span>
                 <label class="popUpThree-form-name-container-right">
-                  <input class="popUpThree-form-name-container-right-input" id="formName" type="text" name="name" onkeydown="return /[A-Za-zА-Яа-яЁё]/i.test(event.key)" onkeypress="limitText(this, 49);">
+                  <input class="popUpThree-form-name-container-right-input" id="formName" type="text" name="name" onkeydown="return /[A-Za-zА-Яа-яЁё\s]/i.test(event.key)" onkeypress="limitText(this, 49);">
                 </label>
               </div>
               <hr>
@@ -113,6 +113,7 @@
               <label class="popUpThree-form-protection-input">
                 <input id="result">
                 <input type="hidden" id="number" th:value="${captchaNumber}">
+                <input type="hidden" id="value" name="value" value="incorrect">
               </label>
             </div>
             <div class="popUpThree-form-button">
@@ -130,7 +131,7 @@
       <header>
         <div class="header-wrapper">
           <div class="header-wrapper-left">
-            <a class="header-wrapper-left-logo" th:href="@{'/'}">
+            <a class="header-wrapper-left-logo" href="/">
               <svg>
                 <use href="#logo-icon"></use>
               </svg>
@@ -141,12 +142,12 @@
             </div>
           </div>
           <div class="header-wrapper-center">
-            <a th:href="@{'tel:' + ${phone.getValue()}}" class="header-wrapper-center-phone" th:utext="${phone.getValue()}"></a>
-            <a th:href="@{'mailto:' + ${email.getValue()}}" class="header-wrapper-center-email" th:utext="${email.getValue()}"></a>
+            <a th:href="@{'tel:' + ${phone.getValue()}}" class="header-wrapper-center-phone" th:text="${phone.getValue()}"></a>
+            <a th:href="@{'mailto:' + ${email.getValue()}}" class="header-wrapper-center-email" th:text="${email.getValue()}"></a>
           </div>
           <div class="header-wrapper-right">
             <nav class="header-wrapper-right-menu">
-              <a th:href="@{'/instruction'}">Инструкция</a>
+              <a href="/instruction">Инструкция</a>
             </nav>
             <div class="header-wrapper-right-button" onclick="showElement('.popUp','flex', 'openPopUp 0.4s ease');">
               <span>Информированное согласие</span>
@@ -242,7 +243,7 @@
               <div class="body-thirdBlock-container-left-text">
                 <p>Для вашего удобства предоставляется инструкция по использованию ZOOM на разных операционных системах.</p>
               </div>
-              <a class="body-thirdBlock-container-left-button" th:href="@{'/instruction'}">
+              <a class="body-thirdBlock-container-left-button" href="/instruction">
                 <span>Посмотреть инструкцию</span>
               </a>
             </div>
@@ -261,25 +262,25 @@
       <footer>
         <div class="footer-wrapper">
           <div class="footer-wrapper-social">
-            <a class="footer-wrapper-social-ig" th:href="@{'https://www.instagram.com/v_n_moroz/'}" target="_blank">
+            <a class="footer-wrapper-social-ig" href="https://www.instagram.com/v_n_moroz/" target="_blank">
               <svg>
                 <use href="#instagram-icon"></use>
               </svg>
             </a>
-            <a class="footer-wrapper-social-vk" th:href="@{'https://vk.com/moroz_n_v'}" target="_blank">
+            <a class="footer-wrapper-social-vk" href="https://vk.com/moroz_n_v" target="_blank">
               <svg>
                 <use href="#vk-icon"></use>
               </svg>
             </a>
-            <a class="footer-wrapper-social-tg" th:href="@{'https://t.me/morozvn'}" target="_blank">
+            <a class="footer-wrapper-social-tg" href="https://t.me/morozvn" target="_blank">
               <svg>
                 <use href="#telegram-icon"></use>
               </svg>
             </a>
           </div>
           <div class="footer-wrapper-contacts">
-            <a th:href="@{'tel:' + ${phone.getValue()}}" class="header-wrapper-left-contacts-phone" th:utext="${phone.getValue()}"></a>
-            <a th:href="@{'mailto:' + ${email.getValue()}}" class="header-wrapper-left-contacts-email" th:utext="${email.getValue()}"></a>
+            <a th:href="@{'tel:' + ${phone.getValue()}}" class="header-wrapper-left-contacts-phone" th:text="${phone.getValue()}"></a>
+            <a th:href="@{'mailto:' + ${email.getValue()}}" class="header-wrapper-left-contacts-email" th:text="${email.getValue()}"></a>
           </div>
           <a class="footer-wrapper-policy" onclick="showElement('.popUpTwo','flex', 'openPopUp 0.4s ease');">Пользовательское соглашение</a>
           <span class="footer-wrapper-copyright"></span>
@@ -342,7 +343,7 @@
       }
 
       document.getElementById('formName').addEventListener('check', () => {
-        return /[A-Za-zА-Яа-яЁё]/i
+        return /[A-Za-zА-Яа-яЁё\s]/i
       })
 
       function checkCaptcha() {
@@ -362,6 +363,8 @@
         if (checkCaptcha() === false) {
 
         } else {
+          document.getElementById("value").value = "correct";
+
           let nameInput = document.querySelector('.popUpThree-form-name-container-right-input');
           let nameText = document.querySelector('.popUpThree-form-name-container-left');
           let phoneInput = document.querySelector('.popUpThree-form-phone-container-right-input');
