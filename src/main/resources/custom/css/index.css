@@ -53,7 +53,8 @@
     transition: var(--animation);
 }
 
-.popUpThree-form-cross-container:hover .popUpThree-form-cross-container-lineOne, .popUpThree-form-cross-container:hover .popUpThree-form-cross-container-lineTwo {
+.popUpThree-form-cross-container:hover .popUpThree-form-cross-container-lineOne,
+.popUpThree-form-cross-container:hover .popUpThree-form-cross-container-lineTwo {
     background-color: var(--colorOne);
     transition: var(--animation);
 }
@@ -293,10 +294,6 @@ hr {
     text-transform: UPPERCASE;
     font-weight: bold;
     letter-spacing: 0.05rem;
-}
-
-.popUpThree-form-protection-equals {
-
 }
 
 .popUpThree-form-protection-input {

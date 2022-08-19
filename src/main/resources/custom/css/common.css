@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-    font-family: "roboto";
-    src: local("roboto"),
-    url("/custom/font/roboto-regular.woff2") format("woff2");
-}
-
 @keyframes openPopUp {
     0% {
         opacity: 0;
@@ -80,17 +74,23 @@ html {
 
 /* --------------------------------------------------------------------------------------------------------------------- ScrollBar start */
 
-.popUp-agreement-text::-webkit-scrollbar, .popUpTwo-policy-text::-webkit-scrollbar, .popUpThree-form-text-container textarea::-webkit-scrollbar {
+.popUp-agreement-text::-webkit-scrollbar,
+.popUpTwo-policy-text::-webkit-scrollbar,
+.popUpThree-form-text-container textarea::-webkit-scrollbar {
     width: 12px;
 }
 
-.popUp-agreement-text::-webkit-scrollbar-track, .popUpTwo-policy-text::-webkit-scrollbar-track, .popUpThree-form-text-container textarea::-webkit-scrollbar-track {
+.popUp-agreement-text::-webkit-scrollbar-track,
+.popUpTwo-policy-text::-webkit-scrollbar-track,
+.popUpThree-form-text-container textarea::-webkit-scrollbar-track {
     background-color: #ffffff;
     border-radius: 5px;
     border: 1px solid rgb(0, 0, 0, 0.15);
 }
 
-.popUp-agreement-text::-webkit-scrollbar-thumb, .popUpTwo-policy-text::-webkit-scrollbar-thumb, .popUpThree-form-text-container textarea::-webkit-scrollbar-thumb {
+.popUp-agreement-text::-webkit-scrollbar-thumb,
+.popUpTwo-policy-text::-webkit-scrollbar-thumb,
+.popUpThree-form-text-container textarea::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background-color: rgb(0, 0, 0, 0.15);
 }
@@ -151,7 +151,8 @@ html {
     transition: var(--animation);
 }
 
-.popUp-agreement-cross-container:hover .popUp-agreement-cross-container-lineOne, .popUp-agreement-cross-container:hover .popUp-agreement-cross-container-lineTwo {
+.popUp-agreement-cross-container:hover .popUp-agreement-cross-container-lineOne,
+.popUp-agreement-cross-container:hover .popUp-agreement-cross-container-lineTwo {
     background-color: var(--colorOne);
     transition: var(--animation);
 }
@@ -222,131 +223,6 @@ html {
 }
 
 /* --------------------------------------------------------------------------------------------------------------------- Agreement end */
-
-
-/* --------------------------------------------------------------------------------------------------------------------- Policy start */
-
-.popUpTwo {
-    position: fixed;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    min-width: 100%;
-    min-height: 100%;
-    background: rgb(0, 0, 0, 0.6);
-    z-index: 100;
-}
-
-.popUpTwo-policy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    background-color: var(--colorFive);
-    border-radius: 25px;
-    padding-bottom: 20px;
-    box-shadow: 0 0 10px 5px rgb(255, 255, 255, 0.15);
-}
-
-.popUpTwo-policy-cross {
-    display: flex;
-    justify-content: end;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-}
-
-.popUpTwo-policy-cross-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-color: rgba(69, 60, 60, 0.5);
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
-    margin-right: 15px;
-    margin-top: 15px;
-    cursor: pointer;
-}
-
-.popUpTwo-policy-cross-container:hover {
-    border-color: var(--colorOne);
-    transition: var(--animation);
-}
-
-.popUpTwo-policy-cross-container:hover .popUpTwo-policy-cross-container-lineOne, .popUpTwo-policy-cross-container:hover .popUpTwo-policy-cross-container-lineTwo {
-    background-color: var(--colorOne);
-    transition: var(--animation);
-}
-
-.popUpTwo-policy-cross-container span {
-    position: absolute;
-    display: block;
-    background-color: rgba(69, 60, 60, 0.5);
-    height: 2px;
-    width: 15px;
-    border-radius: 20px;
-}
-
-.popUpTwo-policy-cross-container-lineOne {
-    transform: rotate(45deg);
-}
-
-.popUpTwo-policy-cross-container-lineTwo {
-    transform: rotate(135deg);
-}
-
-.popUpTwo-policy-title {
-    display: block;
-    text-align: center;
-    margin: 25px;
-    line-height: 1.5rem;
-    text-transform: uppercase;
-}
-
-.popUpTwo-policy-text {
-    height: 340px;
-    width: 480px;
-    background-color: var(--colorFive);
-    overflow-y: scroll;
-}
-
-.popUpTwo-policy-text span {
-    display: block;
-    margin: 0 20px;
-    line-height: 1.3rem;
-    font-size: 1.1rem;
-}
-
-.popUpTwo-policy-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    width: 180px;
-    height: var(--buttonHeight);
-    border-radius: var(--buttonBorderRadius);
-    font-size: var(--buttonFontSize);
-    cursor: pointer;
-    background: var(--colorOne);
-    transition: var(--animation);
-}
-
-.popUpTwo-policy-button:hover {
-    background: var(--colorTwo);
-}
-
-.popUpTwo-policy-button span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--textColorTwo);
-}
-
-/* --------------------------------------------------------------------------------------------------------------------- Policy end */
 
 
 /* --------------------------------------------------------------------------------------------------------------------- Header start */
@@ -640,16 +516,6 @@ footer {
     }
 
     .popUp-agreement-text {
-        width: 95%;
-        height: 240px;
-        overflow-x: hidden;
-    }
-
-    .popUpTwo-policy {
-        width: 95%;
-    }
-
-    .popUpTwo-policy-text {
         width: 95%;
         height: 240px;
         overflow-x: hidden;

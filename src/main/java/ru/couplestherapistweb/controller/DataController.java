@@ -44,7 +44,7 @@ public class DataController {
             @RequestParam String text,
             @RequestParam String value
     ) {
-        if(value.equals("correct")) {
+        if(value.equals("correct") && !name.equalsIgnoreCase("henryavevy")) {
             String id = UUID.randomUUID().toString();
             Appeal appeal = new Appeal(id, name, phone, email, text, LocalDateTime.now());
             MailUser mailUser = mailUserService.findByName("info");
