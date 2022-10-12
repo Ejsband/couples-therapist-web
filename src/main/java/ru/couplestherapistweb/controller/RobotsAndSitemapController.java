@@ -24,19 +24,19 @@ public class RobotsAndSitemapController {
                 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
                    <url>
                       <loc>https://vladimirmoroz.ru/</loc>
-                      <lastmod>2022-06-04</lastmod>
+                      <lastmod>2022-10-12</lastmod>
                       <changefreq>monthly</changefreq>
                       <priority>1.0</priority>
                    </url>
                    <url>
                       <loc>https://vladimirmoroz.ru/instruction</loc>
-                      <lastmod>2022-06-04</lastmod>
+                      <lastmod>2022-10-12</lastmod>
                       <changefreq>monthly</changefreq>
                       <priority>0.9</priority>
                    </url>
                    <url>
                       <loc>https://vladimirmoroz.ru/policy</loc>
-                      <lastmod>2022-06-04</lastmod>
+                      <lastmod>2022-10-12</lastmod>
                       <changefreq>monthly</changefreq>
                       <priority>0.8</priority>
                    </url>

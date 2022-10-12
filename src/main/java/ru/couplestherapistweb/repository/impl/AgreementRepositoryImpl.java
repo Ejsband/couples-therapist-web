@@ -1,6 +1,6 @@
 package ru.couplestherapistweb.repository.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import ru.couplestherapistweb.entity.Agreement;
 import ru.couplestherapistweb.repository.AgreementRepository;
@@ -8,14 +8,10 @@ import ru.couplestherapistweb.repository.AgreementRepository;
 import javax.persistence.EntityManager;
 
 @Repository
+@RequiredArgsConstructor
 public class AgreementRepositoryImpl implements AgreementRepository {
 
     private final EntityManager entityManager;
-
-    @Autowired
-    public AgreementRepositoryImpl(EntityManager entityManager) {
-        this.entityManager = entityManager;
-    }
 
     @Override
     public Agreement findByName(String name) {

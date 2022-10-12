@@ -1,6 +1,6 @@
 package ru.couplestherapistweb.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.couplestherapistweb.entity.MailServer;
 import ru.couplestherapistweb.repository.MailServerRepository;
@@ -10,14 +10,10 @@ import javax.transaction.Transactional;
 
 @Service
 @Transactional
+@RequiredArgsConstructor
 public class MailServerServiceImpl implements MailServerService {
 
     private final MailServerRepository mailServerRepository;
-
-    @Autowired
-    public MailServerServiceImpl(MailServerRepository mailServerRepository) {
-        this.mailServerRepository = mailServerRepository;
-    }
 
     @Override
     public MailServer findByName(String name) {

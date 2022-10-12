@@ -1,6 +1,6 @@
 package ru.couplestherapistweb.repository.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import ru.couplestherapistweb.entity.Contact;
 import ru.couplestherapistweb.repository.ContactRepository;
@@ -8,14 +8,10 @@ import ru.couplestherapistweb.repository.ContactRepository;
 import javax.persistence.EntityManager;
 
 @Repository
+@RequiredArgsConstructor
 public class ContactRepositoryImpl implements ContactRepository {
 
     private final EntityManager entityManager;
-
-    @Autowired
-    public ContactRepositoryImpl(EntityManager entityManager) {
-        this.entityManager = entityManager;
-    }
 
     @Override
     public Contact findByName(String name) {

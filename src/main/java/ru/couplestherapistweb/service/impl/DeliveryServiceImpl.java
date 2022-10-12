@@ -1,6 +1,6 @@
 package ru.couplestherapistweb.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessagePreparator;
@@ -13,14 +13,10 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 @Service
+@RequiredArgsConstructor
 public class DeliveryServiceImpl implements DeliveryService {
 
     private final JavaMailSender mailSender;
-
-    @Autowired
-    public DeliveryServiceImpl(JavaMailSender mailSender) {
-        this.mailSender = mailSender;
-    }
 
     public void sendEmail(String sender, String receiver, String subject, Appeal appeal) {
 
@@ -34,7 +30,7 @@ public class DeliveryServiceImpl implements DeliveryService {
                 %s
 
 
-                Сообщение автоматически сгенерировано сайтом vladimirmoroz.ru и не требует ответа.
+                Сообщение автоматически сгенерировано сайтом www.vladimirmoroz.ru и не требует ответа.
                 """, appeal.getName(), appeal.getPhone(), appeal.getEmail(), appeal.getText());
 
         MimeMessagePreparator mail = new MimeMessagePreparator() {
@@ -53,6 +49,5 @@ public class DeliveryServiceImpl implements DeliveryService {
         catch (MailException ex) {
             System.err.println(ex.getMessage());
         }
-
     }
 }

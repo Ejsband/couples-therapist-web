@@ -1,6 +1,6 @@
 package ru.couplestherapistweb.repository.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import ru.couplestherapistweb.entity.Appeal;
 import ru.couplestherapistweb.repository.AppealRepository;
@@ -9,14 +9,10 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class AppealRepositoryImpl implements AppealRepository {
 
     private final EntityManager entityManager;
-
-    @Autowired
-    public AppealRepositoryImpl(EntityManager entityManager) {
-        this.entityManager = entityManager;
-    }
 
     @Override
     public Appeal findById(String id) {

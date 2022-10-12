@@ -3,7 +3,6 @@ package ru.couplestherapistweb.service.impl;
 import org.springframework.stereotype.Service;
 import ru.couplestherapistweb.service.UtilityService;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;

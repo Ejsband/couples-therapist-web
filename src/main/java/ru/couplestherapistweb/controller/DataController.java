@@ -1,39 +1,29 @@
 package ru.couplestherapistweb.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import ru.couplestherapistweb.entity.Appeal;
 import ru.couplestherapistweb.entity.Client;
 import ru.couplestherapistweb.entity.MailUser;
-import ru.couplestherapistweb.service.*;
+import ru.couplestherapistweb.service.AppealService;
+import ru.couplestherapistweb.service.ClientService;
+import ru.couplestherapistweb.service.DeliveryService;
+import ru.couplestherapistweb.service.MailUserService;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Controller
+@RequiredArgsConstructor
 public class DataController {
 
     private final ClientService clientService;
     private final AppealService appealService;
     private final DeliveryService deliveryService;
     private final MailUserService mailUserService;
-
-    @Autowired
-    public DataController(
-            ClientService clientService,
-            AppealService appealService,
-            DeliveryService deliveryService,
-            MailUserService mailUserService
-    ) {
-        this.clientService = clientService;
-        this.appealService = appealService;
-        this.deliveryService = deliveryService;
-        this.mailUserService = mailUserService;
-    }
 
     @PostMapping("/appeal")
     @ResponseBody

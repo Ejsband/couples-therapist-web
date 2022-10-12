@@ -1,17 +1,21 @@
 package ru.couplestherapistweb.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import ru.couplestherapistweb.service.*;
+import ru.couplestherapistweb.service.AgreementService;
+import ru.couplestherapistweb.service.ContactService;
+import ru.couplestherapistweb.service.ServiceService;
+import ru.couplestherapistweb.service.UtilityService;
 
 import java.util.Map;
 
 @Controller
 @PropertySource("classpath:web.properties")
+@RequiredArgsConstructor
 public class MainController {
 
     @Value( "${index}" )
@@ -27,14 +31,6 @@ public class MainController {
     private final ContactService contactService;
     private final ServiceService serviceService;
     private final UtilityService utilityService;
-
-    @Autowired
-    public MainController(AgreementService agreementService, ContactService contactService, ServiceService serviceService, UtilityService utilityService) {
-        this.agreementService = agreementService;
-        this.contactService = contactService;
-        this.serviceService = serviceService;
-        this.utilityService = utilityService;
-    }
 
     @GetMapping("/")
     public String getIndexPage(Model model) {

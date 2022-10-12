@@ -1,6 +1,6 @@
 package ru.couplestherapistweb.configuration;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -10,14 +10,10 @@ import ru.couplestherapistweb.service.MailServerService;
 import java.util.Properties;
 
 @Configuration
+@RequiredArgsConstructor
 public class MailConfiguration {
 
     private final MailServerService mailServerService;
-
-    @Autowired
-    public MailConfiguration(MailServerService mailServerService) {
-        this.mailServerService = mailServerService;
-    }
 
     @Bean
     public JavaMailSender getJavaMailSender()

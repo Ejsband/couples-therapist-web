@@ -1,6 +1,6 @@
 package ru.couplestherapistweb.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.couplestherapistweb.entity.Appeal;
 import ru.couplestherapistweb.repository.AppealRepository;
@@ -11,14 +11,10 @@ import java.util.List;
 
 @Service
 @Transactional
+@RequiredArgsConstructor
 public class AppealServiceImpl implements AppealService {
 
     private final AppealRepository appealRepository;
-
-    @Autowired
-    public AppealServiceImpl(AppealRepository appealRepository) {
-        this.appealRepository = appealRepository;
-    }
 
     @Override
     public Appeal findById(String id) {
