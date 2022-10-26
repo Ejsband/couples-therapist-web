@@ -1,19 +1,28 @@
 package ru.couplestherapistweb.controller;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+@PropertySource("classpath:web.properties")
 public class RobotsAndSitemapController {
+
+    @Value( "${lastmod}" )
+    private String lastmod;
+    @Value( "${changefreq}" )
+    private String changefreq;
 
     @RequestMapping("/robots.txt")
     @ResponseBody
     public String robots() {
         return """
                 User-agent: *
-                Host: https://vladimirmoroz.ru
-                Sitemap: https://vladimirmoroz.ru/sitemap.xml""";
+                Host: https://www.vladimirmoroz.ru
+                Sitemap: https://www.vladimirmoroz.ru/sitemap.xml
+                """;
     }
 
     @RequestMapping("/sitemap.xml")
@@ -24,22 +33,23 @@ public class RobotsAndSitemapController {
                 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
                    <url>
                       <loc>https://vladimirmoroz.ru/</loc>
-                      <lastmod>2022-10-12</lastmod>
-                      <changefreq>monthly</changefreq>
+                      <lastmod>%s</lastmod>
+                      <changefreq>%s</changefreq>
                       <priority>1.0</priority>
                    </url>
                    <url>
                       <loc>https://vladimirmoroz.ru/instruction</loc>
-                      <lastmod>2022-10-12</lastmod>
-                      <changefreq>monthly</changefreq>
+                      <lastmod>%s</lastmod>
+                      <changefreq>%s</changefreq>
                       <priority>0.9</priority>
                    </url>
                    <url>
                       <loc>https://vladimirmoroz.ru/policy</loc>
-                      <lastmod>2022-10-12</lastmod>
-                      <changefreq>monthly</changefreq>
+                      <lastmod>%s</lastmod>
+                      <changefreq>%s</changefreq>
                       <priority>0.8</priority>
                    </url>
-                </urlset>""";
+                </urlset>
+                """.formatted(lastmod, changefreq, lastmod, changefreq, lastmod, changefreq);
     }
 }

@@ -19,4 +19,6 @@ public class AgreementServiceImpl implements AgreementService {
     public Agreement findByName(String name) {
         return agreementRepository.findByName(name);
     }
+
+
 }

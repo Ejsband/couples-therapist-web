@@ -6,10 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import ru.couplestherapistweb.service.AgreementService;
-import ru.couplestherapistweb.service.ContactService;
-import ru.couplestherapistweb.service.ServiceService;
-import ru.couplestherapistweb.service.UtilityService;
+import ru.couplestherapistweb.service.*;
 
 import java.util.Map;
 
@@ -31,9 +28,11 @@ public class MainController {
     private final ContactService contactService;
     private final ServiceService serviceService;
     private final UtilityService utilityService;
+    private final DataService dataService;
 
     @GetMapping("/")
     public String getIndexPage(Model model) {
+        model.addAttribute("yandexVerification", dataService.findByName("yandexVerification"));
         model.addAttribute("agreement", agreementService.findByName("agreement"));
         model.addAttribute("phone", contactService.findByName("phone"));
         model.addAttribute("email", contactService.findByName("email"));
@@ -47,6 +46,7 @@ public class MainController {
 
     @GetMapping("/instruction")
     public String getInstructionPage(Model model) {
+        model.addAttribute("yandexVerification", dataService.findByName("yandexVerification"));
         model.addAttribute("agreement", agreementService.findByName("agreement"));
         model.addAttribute("phone", contactService.findByName("phone"));
         model.addAttribute("email", contactService.findByName("email"));
@@ -55,6 +55,7 @@ public class MainController {
 
     @GetMapping("/policy")
     public String getPolicyPage(Model model) {
+        model.addAttribute("yandexVerification", dataService.findByName("yandexVerification"));
         model.addAttribute("agreement", agreementService.findByName("agreement"));
         model.addAttribute("policy", agreementService.findByName("policy"));
         model.addAttribute("phone", contactService.findByName("phone"));
