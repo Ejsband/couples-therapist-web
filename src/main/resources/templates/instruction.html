@@ -6,8 +6,7 @@
     <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 882.8 641.3'%3E%3Cstyle%3E.favicon0%7Bfill:%23e6ebff%7D.favicon1%7Bfill:%2366a9ff%7D.favicon2%7Bfill:%23995900%7D.favicon3%7Bfill:%23002577%7D%3C/style%3E%3Cpath class='favicon0' d='M31.5 619.6H390V46H188.9L31.5 619.6z'/%3E%3Cpath class='favicon1' d='M593.1 619.6l200.6-444.5-74.4-164.6H432.8l74.4 165.1-200.7 444.5 286.6-.5z'/%3E%3Cpath class='favicon2' d='M406.4 619.6h43.2s-179-487.7-68.2-550.1c11.5-7.2 17.8-14.9 17.8-23.5h-265c0 10.1 9.1 19.7 25 26.9 204.4 123.8 247.2 546.7 247.2 546.7z'/%3E%3Cpath class='favicon3' d='M867.6 619.6L724.1 46h-215l143.5 573.6h215z'/%3E%3Cg%3E%3Cpath class='favicon0' d='M-266.1 243.9h27.5v-44H-254l-12.1 44z'/%3E%3Cpath class='favicon1' d='M-223 243.9l15.4-34.1-5.7-12.6h-22l5.7 12.6-15.4 34.1h22z'/%3E%3Cpath class='favicon2' d='M-237.3 243.9h3.3s-13.7-37.4-5.2-42.2c.9-.5 1.4-1.1 1.4-1.8h-20.4c0 .8.7 1.5 1.9 2.1 15.7 9.4 19 41.9 19 41.9z'/%3E%3Cpath class='favicon3' d='M-201.9 243.9l-11-44h-16.5l11 44h16.5z'/%3E%3C/g%3E%3C/svg%3E"/>
     <link rel="stylesheet" type="text/css" href="/custom/css/common.css">
     <link rel="stylesheet" type="text/css" href="/custom/css/instruction.css">
-    <meta name="description" content="Инструкция по использовани Zoom для психологического консультирования">
-    <meta name="keywords" content="мороз владимир, moroz vladimir, психологическое консультирование, психологическая помощь, консультация, инструкция, zoom">
+    <meta name="description" content="Инструкция по использованию Zoom для психологического консультирования">
     <meta name="yandex-verification" th:content="${yandexVerification.getValue()}"/>
     <title>Инструкция по использованию ZOOM</title>
 </head>
@@ -16,23 +15,25 @@
 
     <!--    ------------------------------------------------------------------------------------------------------------ Agreement start -->
 
-    <div class="popUp">
-        <div class="popUp-agreement">
-            <div class="popUp-agreement-cross">
-                <div class="popUp-agreement-cross-container" onclick="hideElement('.popUp', 'closePopUp 0.4s ease', 'none', 380);">
-                    <span class="popUp-agreement-cross-container-lineOne"></span>
-                    <span class="popUp-agreement-cross-container-lineTwo"></span>
+    <noindex>
+        <div class="popUp">
+            <div class="popUp-agreement">
+                <div class="popUp-agreement-cross">
+                    <div class="popUp-agreement-cross-container" onclick="hideElement('.popUp', 'closePopUp 0.4s ease', 'none', 380);">
+                        <span class="popUp-agreement-cross-container-lineOne"></span>
+                        <span class="popUp-agreement-cross-container-lineTwo"></span>
+                    </div>
                 </div>
+                <h3 class="popUp-agreement-title">Информированное добровольное согласие клиента на психологическое консультирование</h3>
+                <div class="popUp-agreement-text">
+                    <span th:utext="${agreement.getValue()}"></span>
+                </div>
+                <a class="popUp-agreement-button" href="/custom/file/agreement.pdf" download onclick="hideElement('.popUp', 'closePopUp 0.4s ease', 'none', 380);">
+                    <span>Скачать в PDF</span>
+                </a>
             </div>
-            <h3 class="popUp-agreement-title">Информированное добровольное согласие клиента на психологическое консультирование</h3>
-            <div class="popUp-agreement-text">
-                <span th:utext="${agreement.getValue()}"></span>
-            </div>
-            <a class="popUp-agreement-button" href="/custom/file/agreement.pdf" download onclick="hideElement('.popUp', 'closePopUp 0.4s ease', 'none', 380);">
-                <span>Скачать в PDF</span>
-            </a>
         </div>
-    </div>
+    </noindex>
 
     <!--    ------------------------------------------------------------------------------------------------------------ Agreement end -->
 

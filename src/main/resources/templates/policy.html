@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="/custom/css/common.css">
     <link rel="stylesheet" type="text/css" href="/custom/css/policy.css">
     <meta name="description" content="Политика конфиденциальности сайта Владимир Мороз - психолог-консультант">
-    <meta name="keywords" content="мороз владимир, moroz vladimir, политика конфиденциальности">
     <meta name="yandex-verification" th:content="${yandexVerification.getValue()}"/>
     <title>Политика конфиденциальности</title>
 </head>
@@ -16,23 +15,25 @@
 
     <!--    ------------------------------------------------------------------------------------------------------------ Agreement start -->
 
-    <div class="popUp">
-        <div class="popUp-agreement">
-            <div class="popUp-agreement-cross">
-                <div class="popUp-agreement-cross-container" onclick="hideElement('.popUp', 'closePopUp 0.4s ease', 'none', 380);">
-                    <span class="popUp-agreement-cross-container-lineOne"></span>
-                    <span class="popUp-agreement-cross-container-lineTwo"></span>
+    <noindex>
+        <div class="popUp">
+            <div class="popUp-agreement">
+                <div class="popUp-agreement-cross">
+                    <div class="popUp-agreement-cross-container" onclick="hideElement('.popUp', 'closePopUp 0.4s ease', 'none', 380);">
+                        <span class="popUp-agreement-cross-container-lineOne"></span>
+                        <span class="popUp-agreement-cross-container-lineTwo"></span>
+                    </div>
                 </div>
+                <h3 class="popUp-agreement-title">Информированное добровольное согласие клиента на психологическое консультирование</h3>
+                <div class="popUp-agreement-text">
+                    <span th:utext="${agreement.getValue()}"></span>
+                </div>
+                <a class="popUp-agreement-button" href="/custom/file/agreement.pdf" download onclick="hideElement('.popUp', 'closePopUp 0.4s ease', 'none', 380);">
+                    <span>Скачать в PDF</span>
+                </a>
             </div>
-            <h3 class="popUp-agreement-title">Информированное добровольное согласие клиента на психологическое консультирование</h3>
-            <div class="popUp-agreement-text">
-                <span th:utext="${agreement.getValue()}"></span>
-            </div>
-            <a class="popUp-agreement-button" href="/custom/file/agreement.pdf" download onclick="hideElement('.popUp', 'closePopUp 0.4s ease', 'none', 380);">
-                <span>Скачать в PDF</span>
-            </a>
         </div>
-    </div>
+    </noindex>
 
     <!--    ------------------------------------------------------------------------------------------------------------ Agreement end -->
 

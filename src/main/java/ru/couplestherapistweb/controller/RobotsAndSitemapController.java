@@ -20,8 +20,10 @@ public class RobotsAndSitemapController {
     public String robots() {
         return """
                 User-agent: *
-                Host: https://www.vladimirmoroz.ru
-                Sitemap: https://www.vladimirmoroz.ru/sitemap.xml
+                Disallow: /policy
+                Disallow: /custom/file/agreement.pdf
+                Host: https://vladimirmoroz.ru
+                Sitemap: https://vladimirmoroz.ru/sitemap.xml
                 """;
     }
 
@@ -43,13 +45,7 @@ public class RobotsAndSitemapController {
                       <changefreq>%s</changefreq>
                       <priority>0.9</priority>
                    </url>
-                   <url>
-                      <loc>https://vladimirmoroz.ru/policy</loc>
-                      <lastmod>%s</lastmod>
-                      <changefreq>%s</changefreq>
-                      <priority>0.8</priority>
-                   </url>
                 </urlset>
-                """.formatted(lastmod, changefreq, lastmod, changefreq, lastmod, changefreq);
+                """.formatted(lastmod, changefreq, lastmod, changefreq);
     }
 }
