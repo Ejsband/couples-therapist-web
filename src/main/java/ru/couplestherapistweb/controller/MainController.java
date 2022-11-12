@@ -15,14 +15,22 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class MainController {
 
-    @Value( "${index}" )
-    private String index;
-
-    @Value( "${instruction}" )
-    private String instruction;
-
-    @Value( "${policy}" )
-    private String policy;
+    @Value( "${indexHtml}" )
+    private String indexHtml;
+    @Value( "${instructionHtml}" )
+    private String instructionHtml;
+    @Value( "${policyHtml}" )
+    private String policyHtml;
+    @Value( "${commonCss}" )
+    private String commonCss;
+    @Value( "${indexCss}" )
+    private String indexCss;
+    @Value( "${instructionCss}" )
+    private String instructionCss;
+    @Value( "${policyCss}" )
+    private String policyCss;
+    @Value( "${commonJs}" )
+    private String commonJs;
 
     private final AgreementService agreementService;
     private final ContactService contactService;
@@ -32,34 +40,55 @@ public class MainController {
 
     @GetMapping("/")
     public String getIndexPage(Model model) {
-        model.addAttribute("yandexVerification", dataService.findByName("yandexVerification"));
-        model.addAttribute("agreement", agreementService.findByName("agreement"));
-        model.addAttribute("phone", contactService.findByName("phone"));
-        model.addAttribute("email", contactService.findByName("email"));
+
         model.addAttribute("individual", serviceService.findByName("individual"));
         model.addAttribute("group", serviceService.findByName("group"));
+
         Map<Integer, String> map = utilityService.generateCaptcha();
         model.addAttribute("captchaText", utilityService.getCaptchaString(map));
         model.addAttribute("captchaNumber", utilityService.getCaptchaNumber(map));
-        return index;
+
+        model.addAttribute("agreement", agreementService.findByName("agreement"));
+
+        model.addAttribute("phone", contactService.findByName("phone"));
+        model.addAttribute("email", contactService.findByName("email"));
+
+        model.addAttribute("yandexVerification", dataService.findByName("yandexVerification"));
+
+        model.addAttribute("commonCss", commonCss);
+        model.addAttribute("indexCss", indexCss);
+        model.addAttribute("commonJs", commonJs);
+        return indexHtml;
     }
 
     @GetMapping("/instruction")
     public String getInstructionPage(Model model) {
-        model.addAttribute("yandexVerification", dataService.findByName("yandexVerification"));
         model.addAttribute("agreement", agreementService.findByName("agreement"));
+
         model.addAttribute("phone", contactService.findByName("phone"));
         model.addAttribute("email", contactService.findByName("email"));
-        return instruction;
+
+        model.addAttribute("yandexVerification", dataService.findByName("yandexVerification"));
+
+        model.addAttribute("commonCss", commonCss);
+        model.addAttribute("instructionCss", instructionCss);
+        model.addAttribute("commonJs", commonJs);
+        return instructionHtml;
     }
 
     @GetMapping("/policy")
     public String getPolicyPage(Model model) {
-        model.addAttribute("yandexVerification", dataService.findByName("yandexVerification"));
         model.addAttribute("agreement", agreementService.findByName("agreement"));
         model.addAttribute("policy", agreementService.findByName("policy"));
+
         model.addAttribute("phone", contactService.findByName("phone"));
         model.addAttribute("email", contactService.findByName("email"));
-        return policy;
+
+        model.addAttribute("yandexVerification", dataService.findByName("yandexVerification"));
+
+        model.addAttribute("commonCss", commonCss);
+        model.addAttribute("policyCss", policyCss);
+        model.addAttribute("commonJs", commonJs);
+        return policyHtml;
     }
 }
